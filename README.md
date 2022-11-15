@@ -3,6 +3,7 @@
 ## Website
 
 This contains the website for the documentation and research output of the Creative User Empowerment project.
+It can be viewed at [https://creativeuserempowerment.github.io/](https://creativeuserempowerment.github.io/)
 
 The Creative User Empowerment project works on the implementation of artificial intelligence (AI) for museums.
 
