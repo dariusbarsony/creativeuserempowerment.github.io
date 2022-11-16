@@ -7,3 +7,4 @@ The Creative User Empowerment (CUE) project is is a partnership between the [Bad
 ```{tableofcontents}
 
 ```
+Team 
