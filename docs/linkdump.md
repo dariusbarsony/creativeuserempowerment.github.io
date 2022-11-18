@@ -1,5 +1,7 @@
 # Misc Links
 
+[Training the Archive](https://trainingthearchive.ludwigforum.de/en/start/)
+
 [The Museums + AI Network](https://themuseumsai.network/)
 Developing the conversation around AI, ethics and museums.
 
