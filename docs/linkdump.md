@@ -6,3 +6,5 @@
 Developing the conversation around AI, ethics and museums.
 
 A [list of applications](https://www.artsmetrics.com/en/list-of-artificial-intelligence-ai-initiatives-in-museums/)
+
+Documentation by the [Österreichische Nationalbibliothek](https://labs.onb.ac.at/de/dataset/catalogue/) on using their catalogs. (as Jupyter Notebooks!) 
