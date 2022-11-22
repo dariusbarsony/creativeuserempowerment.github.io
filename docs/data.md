@@ -131,6 +131,13 @@ From the disk dump `wwwopac_TIN_limit100000.xml` records look like this:
 
 We can see that the TIN set is not available in a LOD format like the Beeldbank, so some data conversion and mapping is required.
 
+## a more thorough data lookthrough
+
+the beeldbank at a glance: 
+
+```{glue:} beeldbank info
+```
+
 ### Copyright disclaimer
 
 The content of the TIN website is protected by copyright and may not be reproduced, published or distributed without permission from Allard Pierson. Allard Pierson/Stichting TiN is not the rightful owner of the displayed images. Works of which the maker died more than 70 years ago are royalty-free (Dutch Public Domain). For most of the more recent creations you need to require permission from the copyright holders before we provide high-resolution files.
