@@ -3,5 +3,6 @@ root: intro
 chapters:
   - file: overview
   - file: data
+  - file: data_exploration
   - file: ai
   - file: linkdump
