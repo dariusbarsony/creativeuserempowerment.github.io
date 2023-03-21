@@ -17,21 +17,24 @@ Team-Member Karlsruhe:
 Dr. Johannes Bernhardt, Digital Manager (2021-2023), 
 Dr. Heidi Pfeiffenberger, Data Curator (2021-2022), 
 Harriet Meyer, Data Curator (2022-2023),  
-Sarah Zimmermann, Begleitung und Auswertung Fokusgruppen (2022); 
+Sarah Zimmermann, Focusgroups (2022); 
 Dr. Sarah Hoke, Education & Schools (2022-2023), 
-Elisabeth Haug, Curator Bildarchiv Staufen, 
-Gabriele Häussermann, Digitalisierung Bildarchiv Staufen (2023), 
+Martin Nadarzinski (2021-2022) 
+Gabriele Häussermann, Bildarchiv Staufen (2023) 
+Participating Curators: Elisabeth Haug, Dr. Schoole Mostafawy, Dr. Jutta Dresch, Dr. Katarina Horst, Dr. Clemens Lichter, Susanne Erbelding, Heidrun Jecht, Dr. Katharina Siefert, Brigitte Heck, Oliver Sänger.
+Communication: Stephan Hock, Denise Rothdiener, Natalia März, Katrin Lorbeer 
+
 
 Team Member Amsterdam:
 Marjolein Beumer, Project Lead (2021-2022), 
 Paulien Rètel, Management (2021-2023), 
 Angelien Ponsioen, Focusgroups (2022),
-Ilya Markov, Focusgroups (2022) 
+Ilya Markov, Focusgroups (2022). 
 
 Student Asssistant:
-Darius Barsony (2022-2023) 
-Yat Hei (Brian) Chan (2022) 
-Tim Weiland (2021) 
+Darius Barsony (2022-2023), 
+Yat Hei (Brian) Chan (2022), 
+Tim Weiland (2021). 
 
 Board: 
 Prof. Dr. Eckardt Köhne, Karlsruhe, 
@@ -41,4 +44,3 @@ Els von der Plas, Amsterdam (2022-2023),
 Dr. ir. Jaap Kamps, Amsterdam, 
 Michel Hommel, Amsterdam, 
 Marjolein Beumer (2022-2023);  
-
