@@ -10,11 +10,37 @@ The Creative User Empowerment project works on the implementation of artificial 
 The Creative User Empowerment (CUE) project is  is a partnership between the [Baden State Museum (Karlsruhe)](https://www.landesmuseum.de/konferenz-ki-2022) and [Allard Pierson (Amsterdam)](https://allardpierson.nl/en/research/creative-user-empowerment/). CUE aims to use artificial intelligence (AI) to unlock museum heritage collections via an Open Source tool called xCurator.
 
 Team: 
+Sonja Thiel, Project Lead Badisches Landesmuseum Karlsruhe; 
+Etienne Posthumus, Project Lead Allard Pierson Amsterdam (2022-2023) 
+
+Team-Member Karlsruhe: 
+Dr. Johannes Bernhardt, Digital Manager (2021-2023), 
+Dr. Heidi Pfeiffenberger, Data Curator (2021-2022), 
+Harriet Meyer, Data Curator (2022-2023),  
+Sarah Zimmermann, Focusgroups (2022); 
+Dr. Sarah Hoke, Education & Schools (2022-2023), 
+Martin Nadarzinski (2021-2022) 
+Gabriele Häussermann, Bildarchiv Staufen (2023) 
+Participating Curators: Elisabeth Haug, Dr. Schoole Mostafawy, Dr. Jutta Dresch, Dr. Katarina Horst, Dr. Clemens Lichter, Susanne Erbelding, Heidrun Jecht, Dr. Katharina Siefert, Brigitte Heck, Oliver Sänger.
+Communication: Stephan Hock, Denise Rothdiener, Natalia März, Katrin Lorbeer 
 
 
-# CUE
+Team Member Amsterdam:
+Marjolein Beumer, Project Lead (2021-2022), 
+Paulien Rètel, Management (2021-2023), 
+Angelien Ponsioen, Focusgroups (2022),
+Ilya Markov, Focusgroups (2022). 
 
-repository for the creative user empowerment master's AI thesis at the Allard Pierson Museum. 
+Student Asssistant:
+Darius Barsony (2022-2023), 
+Yat Hei (Brian) Chan (2022), 
+Tim Weiland (2021). 
 
-author: Darius Salvador Barsony MSc. student Artificial Intelligence at the University of Amsterdam. 
-e-mail: dariusbarsony@gmail.com
+Board: 
+Prof. Dr. Eckardt Köhne, Karlsruhe, 
+Susanne Schulenburg, Karlsruhe, 
+Prof. Dr. Wim Hupperetz, Amsterdam (2021), 
+Els von der Plas, Amsterdam (2022-2023), 
+Dr. ir. Jaap Kamps, Amsterdam, 
+Michel Hommel, Amsterdam, 
+Marjolein Beumer (2022-2023);  

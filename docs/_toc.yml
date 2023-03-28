@@ -1,9 +1,8 @@
 format: jb-book
 root: intro
 chapters:
-  - file: intro
   - file: cue
   - file: projects
   - file: data
-  - file: data_exploration
-  - file: linkdump
+  - file: notebooks/data_exploration
+  - file: misc
