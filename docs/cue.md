@@ -1,4 +1,4 @@
-# Overview
+# xCurator
 
 The Creative User Empowerment (CUE) project is a partnership between the [Baden State Museum](https://www.landesmuseum.de/museum) and the [Allard Pierson Museum](https://allardpierson.nl/). CUE aims to use artificial intelligence (AI) to unlock museum heritage collections via an Open Source tool called xCurator.
 
