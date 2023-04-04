@@ -12,6 +12,10 @@ latex:
   latex_documents:
     targetname: book.tex
 
+sphinx:
+  config:
+    html_extra_path: ['assets']
+
 # Information about where the book exists on the web
 # repository:
 #   url: https://creativeuserempowerment.github.io/ # Online location of your book

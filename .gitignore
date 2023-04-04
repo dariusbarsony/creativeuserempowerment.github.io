@@ -1,10 +1,7 @@
-.DS_Store
-docs/_build/*
+_build
+.ipynb_checkpoints
 data
-data exploration.ipynb
-.ipynb_checkpoints/data exploration-checkpoint.ipynb
-uva_alma_beeldbank_dc_new.xml
-distribution.png
-data
-images
 documents
+images
+assets
+feed.xml
