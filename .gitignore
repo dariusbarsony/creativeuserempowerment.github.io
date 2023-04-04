@@ -1,7 +1,18 @@
-_build
 .ipynb_checkpoints
 data
 documents
 images
 assets
 feed.xml
+notebooks
+
+# markdowns and site build
+_config.yml
+_toc.yml
+ai.md
+cue.md
+data.md
+intro.md
+misc.md
+projects.md
+requirements.txt

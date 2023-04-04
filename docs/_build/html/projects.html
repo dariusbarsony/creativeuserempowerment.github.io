@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Documentation of Experiments &#8212; CUE</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data" href="data.html" />
+    <link rel="prev" title="xCurator" href="cue.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CUE</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cue.html">
+   xCurator
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Documentation of Experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/data_exploration.html">
+   Data exploration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="misc.html">
+   Misc links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/projects.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-developers-think-hackathon-x-vol-2">
+   What do developers think? Hackathon x vol. 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-young-people-think-the-bwki-hackathon">
+   What do young people think? The BWKI Hackathon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-to-know-the-digital-visitor">
+   3. How to get to know the digital visitor?
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Documentation of Experiments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-developers-think-hackathon-x-vol-2">
+   What do developers think? Hackathon x vol. 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-do-young-people-think-the-bwki-hackathon">
+   What do young people think? The BWKI Hackathon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-to-know-the-digital-visitor">
+   3. How to get to know the digital visitor?
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="documentation-of-experiments">
+<h1>Documentation of Experiments<a class="headerlink" href="#documentation-of-experiments" title="Permalink to this headline">#</a></h1>
+<p>Within the framework of Creative User Empowerment, a number of experiments were carried out that briefly provide information and support for the development of the xCurator tool. In order to keep the development process transparent, the experiments are presented below.</p>
+<section id="what-do-developers-think-hackathon-x-vol-2">
+<h2>What do developers think? Hackathon x vol. 2<a class="headerlink" href="#what-do-developers-think-hackathon-x-vol-2" title="Permalink to this headline">#</a></h2>
+<p>From 25-27 June 2021, the “Hackathon x Vol. 2” took place as a cooperation between the Badisches Landesmuseum, Allard Pierson Amsterdam and Hack &amp; Söhne. More than 140 people from all over the world took part in the online developer event, which was held under the motto “The Digital Museum” and dealt with challenges on the topics of “Games, Platforms and Artificial Intelligence” and developed creative solutions in 48 hours. Inspiring tech talks and mentoring, online yoga and social gaming on the digital platform Gather.Town accompanied the weekend. Over 20 projects were submitted by 100 people, of which 6 winning projects in 2 sections convinced an interdisciplinary jury.</p>
+<p><strong>Creative Solutions for Artificial Intelligence in the Museum</strong>
+In the section on Artificial Intelligence in the Museum, data sets from the Badisches Landesmuseum and Allard Pierson were made available. The challenge was to develop concepts and applications that use artificial intelligence to make the museum’s digital content available to users in a personalised way.</p>
+<p><strong>The winning projects of the AI Challenge are:</strong>
+1st prize: Etienne Bührle: William: <a class="reference external" href="https://hackathon-x.devpost.com/submissions/239352-william">Chat with William III</a>
+2nd prize: Andrii Strynzha, Raghavendra Vijayanagaram, Fabian Ulmer, Maxim Popov, Nikita Nesterov: <a class="reference external" href="https://hackathon-x.devpost.com/submissions/239350-yourguide%C2%A0">Your Guide - Personalize your visit to museum using generated tour based on your interests</a>
+3rd prize: Nandakishor M: <a class="reference external" href="https://hackathon-x.devpost.com/submissions/239422-image-chat-conversational-ai-app-for-museum-arts">Image chat conversational AI app for museum arts</a>
+All projects can be viewed here:
+<a class="reference external" href="https://hackathon-x.devpost.com/project-gallery">https://hackathon-x.devpost.com/project-gallery</a></p>
+<p><strong>Development Plan</strong></p>
+<p>Following Hackathon x - vol 2-, some teams were invited to continue working on their ideas and concepts at the Development Plan. Two teams took up this challenge:</p>
+<ul class="simple">
+<li><p>Nandakishor M - with “Image Chat”.</p></li>
+<li><p>Richárd Ádám Vécsey &amp; Axel Ország-Krisz - with “Pong”.</p></li>
+</ul>
+<p><strong>Towards Augmented Reality &amp; AI</strong>
+As a virtual guide in the museum, the project works with an AR audio bot (Blenderbot 2.0) with internet search function and AWS to obtain information about artists or the museum. The chatbot has a long-term memory and the ability to access the internet. It outperforms existing models in terms of longer conversations over multiple sessions and has more knowledge and factual consistency than before, according to reviewers. The model stores the knowledge gathered during the conversation in a long-term memory and uses this experience to have long-term conversations. During the conversation, the model searches the internet by making its own queries, reading the results and taking them into account when formulating an answer.</p>
+<p><strong>About the developer:</strong>
+Nandakishor is a Udemy Artificial Intelligence teacher and CEO of deepflow technologies Pvt Ltd, a deep tech startup from India. He is an expert in computer vision, NLP, robotics and IoT. <a class="reference external" href="http://www.deepflow.in">www.deepflow.in</a></p>
+<p>Laudatio:
+“<em>The conversational AI based image chat app is an ambitious and timely idea for which there is already a working prototype. Using an image as a conversation starter is a great idea, and the combination of text and image is very promising for providing additional information or recommending other museum objects that are relevant to the user</em>.” (Jaap Kamps, University of Amsterdam, member of the jury)</p>
+<p>“<em>In the development plan, the project has been steadily and creatively developed, incorporating new features and showing the possibilities of image recognition, voice output and the combination of augmented reality and AI. The highly creative and future-oriented development deserves the prize!</em>” (Sonja Thiel, Project Manager)</p>
+<p><a class="reference external" href="https://github.com/kishorkuttan/Image-chat-conversational-AI-app-for-museum-arts-">https://github.com/kishorkuttan/Image-chat-conversational-AI-app-for-museum-arts-</a>
+This work is based on the following papers:
+Internet-Augmented Dialogue Generation. Mojtaba Komeili, Kurt Shuster, Jason Weston: <a class="reference external" href="https://parl.ai/projects/sea">https://parl.ai/projects/sea</a>
+Beyond goldfish memory: long-term open-domain conversation. Jing Xu, Arthur Szlam, Jason Weston: <a class="reference external" href="https://parl.ai/projects/msc">https://parl.ai/projects/msc</a></p>
+<p><strong>Artwork Recommendation System</strong></p>
+<p>Pong is an AI and ML based artwork recommendation system and makes predictions for artworks based on different approaches. Recommendations are part of our daily lives. From choosing music or movies, to the ideal programme and washing time of washing machines, to the auto-correction service of various messaging apps, we can constantly encounter AI-, ML- or simple algorithm-based recommendation systems. The demo version recommends 27,898 artworks based on 2074 keywords, 7 different colour categories or outputs from AI or ML models. Pong aims to develop a system that is easy to maintain and has a low cost of ownership as it does not need to use any cloud infrastructure or services.</p>
+<p><strong>About the developers:</strong>
+Dr Ország-Krisz Axel
+Axel works as a freelance deep-learning developer, data scientist and career-jumper from law. He believes that artificial intelligence should be accessible to everyone so that people can focus on important things like society and general values instead of dealing with the problems of daily life.</p>
+<p>Dr Vécsey Richárd Ádám
+Richard works as a freelance deep learning developer and data scientist who switched from law to IT. He enjoys playing with AI to find complicated solutions to simple problems.</p>
+<p>Laudatio:
+“<em>Pong has taken the idea of recommending artworks further in the Development Plan, and to do so has worked extensively with the museum’s data and metadata. Their recommendation system was differentiated in terms of rating systems and options for reaction-based rating and personality-based rating were used. After a warm-up phase, users are suggested artworks based either on colour, content (keywords) or a combination. The critical examination of recommendation algorithms is an important contribution to the future of museums</em>.” (Sonja Thiel, project manager)</p>
+<p><a class="reference external" href="https://github.com/hyperrixel/pong">https://github.com/hyperrixel/pong</a></p>
+<p>Pictures:</p>
+<p><img alt="" src="images/blog1_1.png" /></p>
+<p><img alt="" src="images/blog1_2.png" /></p>
+<p><img alt="" src="images/blog1_3.png" /></p>
+<p></p>
+</section>
+<section id="what-do-young-people-think-the-bwki-hackathon">
+<h2>What do young people think? The BWKI Hackathon<a class="headerlink" href="#what-do-young-people-think-the-bwki-hackathon" title="Permalink to this headline">#</a></h2>
+<p>The Federal Competition on Artificial Intelligence (BWKI) motivates students to use the tools of artificial intelligence to implement their own ideas for a better world of tomorrow. The national competition was launched in 2018 at the AI research site in Tübingen by the Competence Center for Machine Learning and enables young people to actively demonstrate their skills in the AI research environment. <a class="reference external" href="https://bw-ki.de/">https://bw-ki.de</a> and <a class="reference external" href="https://ki-kurs.org/">https://ki-kurs.org</a>.</p>
+<p>In 2021 the Baden State Museum cooperated for a hackathon with the BWKI under the motto “Write Code - Write History” and gave out the challenge and the datasets.</p>
+<p>Participants were asked to develop AI applications that will be used in museums of the future to optimize knowledge transfer. The winning project by a 16-year-old student uses augmented reality to bring museum objects to life. The four 17- and 18-year-old students on the “Hyperion” team generated new artworks based on museum data. The winning team was supported by the Badisches Landesmuseum in the continuation of its project idea. Book prizes and participation in various online courses were also awarded to other teams.</p>
+<p>“Artificial intelligence is one of the most important and exciting topics of our time, it is a real game changer. In the national AI competition, teenagers and young adults can play an active role in shaping this important topic of the future,” explained Minister Theresia Bauer, Chairwoman of the Carl Zeiss Foundation Administration, and patron of the national competition. “Children have curiosity and fun. That makes them ideal researchers and they can live that out at BWKI,” said Professor Bernhard Schölkopf, Director at the Max Planck Institute for Intelligent Systems and one of the initiators of the competition. “It is just great and inspiring to see the creativity, skill and perseverance of the students in this competition. I dream of a society in which we encourage each other much more to develop and try out good ideas,” according to Professor Matthias Bethge, co-initiator of the competition and head of the Tübingen AI Center, BMBF Competence Center for Machine Learning.</p>
+<p>The final video can be viewed here: <a class="reference external" href="https://www.youtube.com/watch?v=fqbfwt1IxZo&amp;feature=youtu.be">https://www.youtube.com/watch?v=fqbfwt1IxZo&amp;feature=youtu.be</a></p>
+<p>The winning teams of the hackathon were:</p>
+<ul class="simple">
+<li><p>Frege-2, Team LoremIpsum Boris Kantor, kARlsruhe augmented reality of museum content</p></li>
+<li><p>Turing-2, Team Hyperion, AI Art Generator</p></li>
+<li><p>Frege-1, Team Space Poster, Hieroglyphic Translator</p></li>
+<li><p>Lovelance-2, Team Cookiesablehnen</p></li>
+</ul>
+<p>As part of „Creative User Empowerment”, it was a great pleasure to see what children and young people can do with museum data and how creatively and innovatively they use it. The hackathon was another step on the way to making museum data accessible to everyone and opening up creative spaces.</p>
+<p>Pictures:</p>
+<p><img alt="" src="images/blog2_1.png" /> <img alt="" src="images/blog2_2.png" /></p>
+</section>
+<section id="how-to-get-to-know-the-digital-visitor">
+<h2>3. How to get to know the digital visitor?<a class="headerlink" href="#how-to-get-to-know-the-digital-visitor" title="Permalink to this headline">#</a></h2>
+<p>Analyzing digital user data: developing an audience segmentation model</p>
+<p>Developing a new tool, offer or exhibition requires to get to know your audience.
+But how can this be done better for the digital museum and can methods from the field of artificial intelligence help here?</p>
+<p>Although the field of visitor research has been further developed in research and practice in recent years, for example visibly with the <a class="reference external" href="https://www.smb.museum/museen-einrichtungen/institut-fuer-museumsforschung/ueber-uns/nachrichten/detail/erfolgreiche-jahrestagung-2022-besucherinnenforschung-digital/">Netzwerk Besucherinnenforschung</a> (Visitor Research Network), we still know very little about the digital museum audience for the digital space.
+In order to get closer to the digital visitors of the Badisches Landesmuseum, we have therefore started at different levels.</p>
+<p>On the one hand, in 11/2021 a <a class="reference external" href="https://www.digitaler-besucher.de/de/digitale-besucherinnen-im-fokus/">digital conference</a> was held together with the Landesmuseum Württemberg, which brought together international best practice, such as the contribution by John Stack on key figures of digital visits or a contribution by Alexander Britz on approaches to recording visitors with the help of artificial intelligence: <a class="reference external" href="https://www.youtube.com/live/xIpKMYFeQ_4?feature=share&amp;t=5428">https://www.youtube.com/live/xIpKMYFeQ_4?feature=share&amp;t=5428</a>
+Johannes Bernhardt and Christian Gries have summarized overarching models for recording digital audiences <a class="reference external" href="https://www.museumsmanagement-online.de/beitrag/%21/id/1370/das-digitale-publikumpdf_62949aaff0581">here.</a></p>
+<p>On the other hand, a digital user survey was conducted at the Badisches Landesmuseum in 2021, which was evaluated in cooperation with <a class="reference external" href="https://www.fh-kiel.de/fachbereiche/wirtschaft/wir-ueber-uns/lehre/hauptamtlich-lehrende/prof-dr-stephan-schneider/">Kiel University of Applied Sciences</a> and <a class="reference external" href="https://www.landesmuseum.de/museum/forschung-projekte/zeb">the ZEB | Centre for Evaluation and Visitor Research</a> in 2022. The survey can still be completed here: <a class="reference external" href="https://umfrage.landesmuseum.de/s/CUE">https://umfrage.landesmuseum.de/s/CUE</a></p>
+<p>On the basis of this, the data was statistically evaluated until 12/2021 and an AI-supported segmentation model was developed on the basis of the user data, which can be reused. The segmentation model can be viewed here: <a class="reference external" href="https://github.com/sonjathiel/CUE">https://github.com/sonjathiel/CUE</a></p>
+<p>The entire evaluation can be viewed [here.]The aim was to shed light on the topic of AI-supported audience segmentation from a research and development perspective and to develop approaches that can be a basis for the further development of the xCurator tool and support museums in getting to know their visitors better. Through the parallel development of key figures, the examination of long-term visitor tracking and the introduction of new tools, synergies could be created in the Badisches Landesmuseum that contribute to increasing empathy for digital users.</p>
+<p><img alt="" src="images/blog3_1.jpg" /> <img alt="" src="images/blog3_2.JPG" /> <img alt="" src="images/blog3_3.JPG" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="cue.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">xCurator</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AP & BLM<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
