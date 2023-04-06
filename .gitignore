@@ -1,4 +1,7 @@
-.DS_Store
-docs/_build/*
+_build
+.ipynb_checkpoints
 data
-data exploration.ipynb
+documents
+images
+assets
+feed.xml
