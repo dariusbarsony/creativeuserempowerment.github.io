@@ -1,0 +1,1830 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>exploration of UvA Alma Beelbank &#8212; CUE</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AI" href="ai.html" />
+    <link rel="prev" title="Data" href="data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CUE</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Creative User Empowerment
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   exploration of UvA Alma Beelbank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ai.html">
+   AI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linkdump.html">
+   Misc Links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://creativeuserempowerment.github.io/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://creativeuserempowerment.github.io//issues/new?title=Issue%20on%20page%20%2Fdata_exploration.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/data_exploration.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   exploration of UvA Alma Beelbank
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-analysis-of-the-descriptions">
+     Some analysis of the descriptions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beeldbank-marc">
+   Beeldbank marc
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-analysis-of-the-beeldbank-marc-data">
+     short analysis of the beeldbank marc data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theater-dataset">
+   theater dataset
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-done-on-the-theatre-collections-dataset">
+     preprocessing done on the theatre collections dataset.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping-from-xml-data-format-to-lod-format">
+     mapping from XML data format to LOD format
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>exploration of UvA Alma Beelbank</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   exploration of UvA Alma Beelbank
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-analysis-of-the-descriptions">
+     Some analysis of the descriptions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beeldbank-marc">
+   Beeldbank marc
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-analysis-of-the-beeldbank-marc-data">
+     short analysis of the beeldbank marc data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theater-dataset">
+   theater dataset
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preprocessing-done-on-the-theatre-collections-dataset">
+     preprocessing done on the theatre collections dataset.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapping-from-xml-data-format-to-lod-format">
+     mapping from XML data format to LOD format
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exploration-of-uva-alma-beelbank">
+<h1>exploration of <a class="reference external" href="https://uba.uva.nl/en/support/open-data/data-sets-and-publication-channels/data-sets-and-publication-channels.html#Archeological-objects">UvA Alma Beelbank</a><a class="headerlink" href="#exploration-of-uva-alma-beelbank" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_xml</span><span class="p">(</span><span class="s1">&#39;data/uva_alma_beeldbank_dc_new.xml&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">alma_beeldbank</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 35564 entries, 0 to 35563
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   schemaLocation  35564 non-null  object
+ 1   title           35564 non-null  object
+ 2   description     35512 non-null  object
+ 3   publisher       29517 non-null  object
+ 4   contributor     28220 non-null  object
+ 5   date            35093 non-null  object
+ 6   type            897 non-null    object
+ 7   identifier      35564 non-null  object
+ 8   language        35564 non-null  object
+ 9   relation        35496 non-null  object
+ 10  subject         10883 non-null  object
+ 11  coverage        2050 non-null   object
+ 12  format          5390 non-null   object
+ 13  source          1 non-null      object
+dtypes: object(14)
+memory usage: 3.8+ MB
+None
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;type&#39;, ylabel=&#39;count&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/data_exploration_4_1.png" src="_images/data_exploration_4_1.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 most occuring formats in beelbank data: 
+ vorm                            932
+handgemaakt: aquarel            838
+op de schijf gedraaid           399
+aardewerkmateriaal              300
+sculptuur, afgietsel in gips    241
+offset                          209
+geschilderd                     205
+gedrukt: lithografie            167
+vlakdruk                        141
+sculptuur                       135
+Name: format, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;unique entries in language category:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>unique entries in language category:
+ [&#39;fre&#39; &#39;dut&#39; &#39;yid&#39; &#39;heb&#39; &#39;lat&#39; &#39;arm&#39; &#39;arc&#39; &#39;spa&#39; &#39;ita&#39; &#39;ger&#39; &#39;por&#39; &#39;eng&#39;
+ &#39;goh&#39; &#39;nds&#39; &#39;und&#39; &#39;grc&#39; &#39;mul&#39; &#39;ara&#39; &#39;fry&#39; &#39;mis&#39; &#39;swe&#39; &#39;afr&#39; &#39;may&#39; &#39;san&#39;
+ &#39;chi&#39; &#39;nor&#39; &#39;rus&#39; &#39;dan&#39; &#39;map&#39; &#39;jav&#39; &#39;sun&#39; &#39;dum&#39; &#39;epo&#39; &#39;gre&#39; &#39;ben&#39; &#39;hun&#39;
+ &#39;paa&#39; &#39;fin&#39; &#39;pol&#39; &#39;ban&#39; &#39;per&#39; &#39;Nederlands [TA].&#39; &#39;hin&#39; &#39;ind&#39; &#39;egy&#39; &#39;xxx&#39;
+ &#39;Text in Latin and Dutch.&#39; &#39;Hebreeuws in Latijns schrift.&#39;
+ &#39;Duits met Hebreeuwse letters.&#39; &#39;In het Duits met Hebreeuwse letters.&#39;
+ &#39;Duits met Hebreeuwse.&#39; &#39;Tekst in het Duits met Hebreeuwse letters.&#39;
+ &#39;Taal onduidelijk, vermoedelijk Duits.&#39;
+ &#39;Taal: misschien Hebreeuws in transcriptie.&#39;
+ &#39;Taal onduidelijk, vermoedelijk Hebreeuws in transcriptie.&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;value counts in language category per language:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>value counts in language category per language:
+ dut                                                          13451
+heb                                                           9764
+xxx                                                           8702
+ger                                                            992
+fre                                                            664
+lat                                                            634
+eng                                                            576
+und                                                            183
+yid                                                            151
+spa                                                             70
+Duits met Hebreeuwse letters.                                   44
+fry                                                             39
+grc                                                             34
+dan                                                             30
+por                                                             27
+ita                                                             27
+swe                                                             21
+rus                                                             18
+mul                                                             14
+nor                                                             13
+afr                                                             11
+may                                                             11
+arm                                                             10
+san                                                              8
+arc                                                              6
+ara                                                              6
+epo                                                              6
+ben                                                              5
+jav                                                              4
+mis                                                              4
+sun                                                              3
+dum                                                              3
+hun                                                              3
+In het Duits met Hebreeuwse letters.                             3
+map                                                              2
+chi                                                              2
+Tekst in het Duits met Hebreeuwse letters.                       2
+pol                                                              2
+ban                                                              2
+per                                                              2
+Taal: misschien Hebreeuws in transcriptie.                       1
+Taal onduidelijk, vermoedelijk Duits.                            1
+Duits met Hebreeuwse.                                            1
+Hebreeuws in Latijns schrift.                                    1
+Text in Latin and Dutch.                                         1
+nds                                                              1
+egy                                                              1
+ind                                                              1
+hin                                                              1
+Nederlands [TA].                                                 1
+fin                                                              1
+paa                                                              1
+goh                                                              1
+gre                                                              1
+Taal onduidelijk, vermoedelijk Hebreeuws in transcriptie.        1
+Name: language, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;unique authors of items in beeldbank:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;contributor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>unique authors of items in beeldbank:
+ [&#39;Quellinus, Artus (Artus), beeldhouwer, 1609-1668. (NL-LeOCL)091438969 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839288655305131.jsonld&#39;
+ &#39;Lennep, J. van (Jacob), 1802-1868, publisher (NL-LeOCL)06833544X https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839182012305131.jsonld&#39;
+ &#39;Zevi Hirsh ben Abraham transcriber&#39; ...
+ &#39;Mascarenhas, Pero (NL-LeOCL)144244322 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839331252005131.jsonld&#39;
+ &#39;Sampayo, Lopo Vaz de, 1526 fl. (NL-LeOCL)144243121 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839331253705131.jsonld&#39;
+ &#39;Śaśporṭaś, Yaʿaqov (Jacob), 1610-1698. (NL-LeOCL)109311817 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839298098705131.jsonld&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;n0 of occuring items per author:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;contributor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>n0 of occuring items per author:
+ Pekidim &amp; Amarkalim (Amsterdam) rcp                                                                                                                                 10044
+H. G. Bom Amsterdam                                                                                                                                                   270
+G. Th. Bom &amp; Zn Amsterdam                                                                                                                                             156
+J. L. Beijers Utrecht                                                                                                                                                 156
+R. W. P. de Vries Amsterdam                                                                                                                                           126
+                                                                                                                                                                    ...  
+Sleeswijk, C. (Cornelis) (NL-LeOCL)111987261 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839300005005131.jsonld                          1
+Vereeniging ter bevordering der geitenfokkerij in Zeeland.                                                                                                              1
+Koch, H.                                                                                                                                                                1
+Huismans, S. (Sipke), 1873-1924. (NL-LeOCL)10060482X https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839293185005131.jsonld                  1
+Śaśporṭaś, Yaʿaqov (Jacob), 1610-1698. (NL-LeOCL)109311817 https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839298098705131.jsonld        1
+Name: contributor, Length: 8817, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unique_dates</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;items per year: &#39;</span><span class="p">,</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>items per year:  |                                                      |   date |
+|:-----------------------------------------------------|-------:|
+| 1889                                                 |   1548 |
+| 1887                                                 |   1518 |
+| 1888                                                 |   1282 |
+| 1918                                                 |   1066 |
+| 1917                                                 |   1052 |
+| 1916                                                 |   1050 |
+| 1915                                                 |   1049 |
+| 1919                                                 |   1032 |
+| 1910                                                 |    916 |
+| 1914                                                 |    885 |
+| 1883                                                 |    860 |
+| 1899                                                 |    830 |
+| 1900                                                 |    769 |
+| 1913                                                 |    754 |
+| 1891                                                 |    708 |
+| 1901                                                 |    683 |
+| 1912                                                 |    677 |
+| 1911                                                 |    666 |
+| 1884                                                 |    619 |
+| 1903                                                 |    549 |
+| 1902                                                 |    494 |
+| 1890                                                 |    493 |
+| 1893                                                 |    468 |
+| 19uu                                                 |    466 |
+| 1882                                                 |    442 |
+| 1870                                                 |    374 |
+| 1896                                                 |    319 |
+| 1898                                                 |    306 |
+| 1881                                                 |    286 |
+| 18uu                                                 |    268 |
+| 1885                                                 |    226 |
+| 1880                                                 |    223 |
+| 1894                                                 |    216 |
+| 1897                                                 |    212 |
+| 1895                                                 |    183 |
+| 1876                                                 |    177 |
+| 1886                                                 |    176 |
+| 1877                                                 |    168 |
+| 1851                                                 |    167 |
+| 1892                                                 |    158 |
+| 1879                                                 |    150 |
+| 1878                                                 |    138 |
+| 1863                                                 |    133 |
+| 1860                                                 |    127 |
+| 1875                                                 |    123 |
+| 1874                                                 |    122 |
+| 1869                                                 |    122 |
+| 1866                                                 |    114 |
+| 1868                                                 |    113 |
+| 188u                                                 |    109 |
+| 1873                                                 |    106 |
+| 1685                                                 |    105 |
+| 1867                                                 |    104 |
+| 1861                                                 |    103 |
+| 1651                                                 |    103 |
+| 1801                                                 |    103 |
+| 1872                                                 |    102 |
+| 1862                                                 |    102 |
+| 1865                                                 |    102 |
+| 400-300 voor Christus                                |    101 |
+| 1858                                                 |     96 |
+| 1871                                                 |     94 |
+| 1857                                                 |     94 |
+| 1701                                                 |     93 |
+| 1837                                                 |     88 |
+| 1864                                                 |     87 |
+| 1850                                                 |     83 |
+| 1706                                                 |     79 |
+| hellenistische periode                               |     78 |
+| 1833                                                 |     77 |
+| 1838                                                 |     77 |
+| 1854                                                 |     77 |
+| 1856                                                 |     74 |
+| 1847                                                 |     74 |
+| 1859                                                 |     73 |
+| 1845                                                 |     73 |
+| 1842                                                 |     73 |
+| 1839                                                 |     72 |
+| 1601                                                 |     71 |
+| 1855                                                 |     71 |
+| 1743                                                 |     70 |
+| 1846                                                 |     69 |
+| 325-300 voor Christus                                |     69 |
+| 1840                                                 |     69 |
+| 1852                                                 |     67 |
+| 1836                                                 |     67 |
+| hellenistisch                                        |     63 |
+| 1848                                                 |     63 |
+| 1849                                                 |     63 |
+| 1997                                                 |     62 |
+| Romeins                                              |     61 |
+| 1853                                                 |     61 |
+| 1835                                                 |     59 |
+| 1844                                                 |     59 |
+| 1751                                                 |     57 |
+| 1843                                                 |     56 |
+| 1907                                                 |     52 |
+| 1926                                                 |     52 |
+| 1841                                                 |     51 |
+| 1908                                                 |     51 |
+| 1905                                                 |     51 |
+| 1930                                                 |     50 |
+| 1906                                                 |     50 |
+| 0244                                                 |     47 |
+| 1927                                                 |     47 |
+| 0100                                                 |     47 |
+| 1904                                                 |     47 |
+| 1834                                                 |     47 |
+| 1823                                                 |     46 |
+| 1928                                                 |     45 |
+| 0300                                                 |     45 |
+| 1937                                                 |     44 |
+| 1936                                                 |     44 |
+| 1820                                                 |     43 |
+| 1925                                                 |     43 |
+| 0200                                                 |     43 |
+| 4de eeuw voor Christus                               |     42 |
+| 1909                                                 |     42 |
+| 1822                                                 |     42 |
+| 1817                                                 |     42 |
+| 1938                                                 |     42 |
+| 1824                                                 |     42 |
+| 1821                                                 |     41 |
+| 1939                                                 |     40 |
+| 1934                                                 |     38 |
+| 425-400 voor Christus                                |     37 |
+| 1923                                                 |     37 |
+| keizertijd                                           |     36 |
+| 1818                                                 |     36 |
+| 1929                                                 |     35 |
+| 300-200 voor Christus                                |     35 |
+| 1816                                                 |     35 |
+| 1811                                                 |     35 |
+| 1725                                                 |     35 |
+| 450 voor Christus                                    |     33 |
+| 1830                                                 |     33 |
+| 189u                                                 |     33 |
+| 1618                                                 |     33 |
+| 1951                                                 |     32 |
+| 1826                                                 |     32 |
+| 1932                                                 |     32 |
+| 0400                                                 |     32 |
+| 3de eeuw voor Christus                               |     31 |
+| 16uu                                                 |     30 |
+| 1920                                                 |     30 |
+| 1702                                                 |     30 |
+| 1825                                                 |     30 |
+| 1828                                                 |     30 |
+| 1808                                                 |     29 |
+| 400-200 voor Christus                                |     29 |
+| 1924                                                 |     29 |
+| 1921                                                 |     28 |
+| 1690                                                 |     28 |
+| 1935                                                 |     27 |
+| 1750                                                 |     27 |
+| 1814                                                 |     27 |
+| 1707                                                 |     26 |
+| 1829                                                 |     25 |
+| 1630                                                 |     25 |
+| 1800                                                 |     25 |
+| 0395                                                 |     24 |
+| 1623                                                 |     24 |
+| 5de eeuw voor Christus                               |     23 |
+| 1827                                                 |     23 |
+| 1832                                                 |     23 |
+| 300-100 voor Christus                                |     22 |
+| 1996                                                 |     22 |
+| 1922                                                 |     22 |
+| 1953                                                 |     22 |
+| 1619                                                 |     22 |
+| 1831                                                 |     22 |
+| 1745                                                 |     22 |
+| 0-100 na Christus                                    |     20 |
+| 1744                                                 |     20 |
+| 3de-2de eeuw voor Christus                           |     20 |
+| 500-400 voor Christus                                |     20 |
+| 1809                                                 |     20 |
+| 1931                                                 |     19 |
+| 1677                                                 |     19 |
+| Late Tijd                                            |     19 |
+| 475-450 voor Christus                                |     19 |
+| 1635                                                 |     19 |
+| 1813                                                 |     19 |
+| 1700                                                 |     18 |
+| 1608                                                 |     18 |
+| 525-500 voor Christus                                |     17 |
+| 1671                                                 |     17 |
+| 350 voor Christus                                    |     17 |
+| 350-300 voor Christus                                |     17 |
+| 1812                                                 |     17 |
+| 1694                                                 |     17 |
+| 185u                                                 |     17 |
+| 500-475 voor Christus                                |     16 |
+| 1655                                                 |     16 |
+| 6de eeuw voor Christus                               |     16 |
+| 1500                                                 |     16 |
+| 1985                                                 |     16 |
+| 1631                                                 |     16 |
+| 2de-1ste eeuw voor Christus                          |     16 |
+| 0001                                                 |     16 |
+| 1998                                                 |     16 |
+| 1975                                                 |     16 |
+| 0250                                                 |     15 |
+| 325-275 voor Christus                                |     15 |
+| 500-300 voor Christus                                |     15 |
+| 1807                                                 |     15 |
+| 1980                                                 |     15 |
+| 187u                                                 |     15 |
+| 1955                                                 |     14 |
+| 1819                                                 |     14 |
+| 1965                                                 |     14 |
+| 1806                                                 |     14 |
+| midden 4de eeuw voor Christus                        |     14 |
+| 1805                                                 |     14 |
+| 2de helft 6de eeuw voor Christus                     |     14 |
+| 1650                                                 |     14 |
+| 1674                                                 |     14 |
+| 1660                                                 |     14 |
+| 450-425 voor Christus                                |     13 |
+| 200-100 voor Christus                                |     13 |
+| 1810                                                 |     13 |
+| Grieks Romeins                                       |     13 |
+| vroeg 5de eeuw voor Christus                         |     13 |
+| 2007                                                 |     13 |
+| 1802                                                 |     13 |
+| midden 6de eeuw voor Christus                        |     13 |
+| 1988                                                 |     13 |
+| 17uu                                                 |     13 |
+| 1640                                                 |     12 |
+| 600-500 voor Christus                                |     12 |
+| 1974                                                 |     12 |
+| 1730                                                 |     12 |
+| Romeins (vermoedelijk)                               |     12 |
+| 1956                                                 |     12 |
+| 1983                                                 |     12 |
+| 1948                                                 |     12 |
+| 1704                                                 |     11 |
+| 1989                                                 |     11 |
+| 2de kwart 5de eeuw voor Christus                     |     11 |
+| 0050                                                 |     11 |
+| 1625                                                 |     11 |
+| 0238                                                 |     11 |
+| 1815                                                 |     11 |
+| 1738                                                 |     11 |
+| 1600                                                 |     11 |
+| 1940                                                 |     11 |
+| 1982                                                 |     11 |
+| 1740                                                 |     11 |
+| 1ste kwart 5de eeuw voor Christus                    |     11 |
+| 4de-3de eeuw voor Christus                           |     11 |
+| 1629                                                 |     11 |
+| 200-0 voor Christus                                  |     11 |
+| 1952                                                 |     11 |
+| 0249                                                 |     10 |
+| 1758                                                 |     10 |
+| 1648                                                 |     10 |
+| 1ste-2de eeuw na Christus                            |     10 |
+| 1978                                                 |     10 |
+| 1609                                                 |     10 |
+| 0217                                                 |     10 |
+| Ptolemaeisch                                         |     10 |
+| 1977                                                 |     10 |
+| 0198                                                 |     10 |
+| 1ste eeuw na Christus                                |     10 |
+| 1ste helft 6de eeuw voor Christus                    |     10 |
+| 1949                                                 |     10 |
+| 1792                                                 |     10 |
+| 1767                                                 |     10 |
+| 1964                                                 |     10 |
+| 3de kwart 5de eeuw voor Christus                     |     10 |
+| 1693                                                 |     10 |
+| 1641                                                 |     10 |
+| 1803                                                 |     10 |
+| 1634                                                 |     10 |
+| 1675                                                 |     10 |
+| 1666                                                 |      9 |
+| 0600                                                 |      9 |
+| 1976                                                 |      9 |
+| 400-350 voor Christus                                |      9 |
+| 1720                                                 |      9 |
+| 1804                                                 |      9 |
+| 525-475 voor Christus                                |      9 |
+| 1636                                                 |      9 |
+| 1657                                                 |      9 |
+| 1633                                                 |      9 |
+| 1622                                                 |      9 |
+| 1754                                                 |      9 |
+| 1680                                                 |      9 |
+| 400-375 voor Christus                                |      9 |
+| 1990                                                 |      9 |
+| 1715                                                 |      9 |
+| 1995                                                 |      9 |
+| 1950                                                 |      9 |
+| hellenistische periode (vermoedelijk)                |      9 |
+| 1973                                                 |      9 |
+| 1615                                                 |      9 |
+| laat 6de eeuw voor Christus                          |      9 |
+| 1984                                                 |      9 |
+| 425-375 voor Christus                                |      9 |
+| 1954                                                 |      8 |
+| 1981                                                 |      8 |
+| 186u                                                 |      8 |
+| 1760                                                 |      8 |
+| 1752                                                 |      8 |
+| 1682                                                 |      8 |
+| 3de kwart 6de eeuw voor Christus                     |      8 |
+| 1665                                                 |      8 |
+| 1958                                                 |      8 |
+| 1992                                                 |      8 |
+| midden 5de eeuw voor Christus                        |      8 |
+| 1775                                                 |      8 |
+| 1759                                                 |      8 |
+| Late Tijd Saïtische dynastie 26                      |      8 |
+| 1614                                                 |      8 |
+| 1699                                                 |      7 |
+| 1961                                                 |      7 |
+| 0247                                                 |      7 |
+| 1933                                                 |      7 |
+| 1960                                                 |      7 |
+| 1979                                                 |      7 |
+| 100-0 voor Christus                                  |      7 |
+| 1786                                                 |      7 |
+| 1972                                                 |      7 |
+| 2de eeuw voor Christus                               |      7 |
+| 1708                                                 |      7 |
+| 0-200 na Christus                                    |      7 |
+| 1642                                                 |      7 |
+| 350-325 voor Christus                                |      7 |
+| 1621                                                 |      7 |
+| 1652                                                 |      7 |
+| 2000                                                 |      7 |
+| 200-150 voor Christus                                |      7 |
+| 1ste eeuw voor Christus                              |      7 |
+| 1620                                                 |      7 |
+| 5de-4de eeuw voor Christus                           |      7 |
+| 1662                                                 |      7 |
+| 1654                                                 |      7 |
+| vroeg 4de eeuw voor Christus                         |      7 |
+| 1592                                                 |      7 |
+| 1688                                                 |      7 |
+| 1ste kwart 4de eeuw voor Christus                    |      7 |
+| 1748                                                 |      7 |
+| 500-450 voor Christus                                |      7 |
+| 550-500 voor Christus                                |      7 |
+| 1986                                                 |      7 |
+| ca.500 voor Christus                                 |      6 |
+| 1712                                                 |      6 |
+| 0150                                                 |      6 |
+| 1663                                                 |      6 |
+| 1594                                                 |      6 |
+| 1697                                                 |      6 |
+| laat 4de eeuw voor Christus                          |      6 |
+| 1664                                                 |      6 |
+| 1957                                                 |      6 |
+| 325-250 voor Christus                                |      6 |
+| 1796                                                 |      6 |
+| 1628                                                 |      6 |
+| 1753                                                 |      6 |
+| 1649                                                 |      6 |
+| 1785                                                 |      6 |
+| 1780                                                 |      6 |
+| 450-400 voor Christus                                |      6 |
+| 1724                                                 |      6 |
+| 1579                                                 |      6 |
+| 600-400 voor Christus                                |      6 |
+| 300-275 voor Christus                                |      6 |
+| 550-525 voor Christus                                |      6 |
+| 1598                                                 |      6 |
+| 1590                                                 |      6 |
+| 1962                                                 |      6 |
+| ca. 300 voor Christus                                |      6 |
+| laatste kwart 5de eeuw voor Christus                 |      6 |
+| 1705                                                 |      6 |
+| 1ste eeuw na Christus of later                       |      6 |
+| 1794                                                 |      6 |
+| 25-0 voor Christus                                   |      6 |
+| 1658                                                 |      6 |
+| 1612                                                 |      5 |
+| 1711                                                 |      5 |
+| 1732                                                 |      5 |
+| 1627                                                 |      5 |
+| 1788                                                 |      5 |
+| 2de helft 4de eeuw voor Christus                     |      5 |
+| 1661                                                 |      5 |
+| 1783                                                 |      5 |
+| 1603                                                 |      5 |
+| 1787                                                 |      5 |
+| 0020                                                 |      5 |
+| 575-550 voor Christus                                |      5 |
+| 1791                                                 |      5 |
+| 1695                                                 |      5 |
+| 1771                                                 |      5 |
+| 1737                                                 |      5 |
+| 300 voor Christus                                    |      5 |
+| 1632                                                 |      5 |
+| 1968                                                 |      5 |
+| 1966                                                 |      5 |
+| 1773                                                 |      5 |
+| 1670                                                 |      5 |
+| 1987                                                 |      5 |
+| 1710                                                 |      5 |
+| 1643                                                 |      5 |
+| 1742                                                 |      5 |
+| 1770                                                 |      5 |
+| 2005                                                 |      5 |
+| 1959                                                 |      5 |
+| 1596                                                 |      5 |
+| Nieuwe Rijk dynastie 18                              |      5 |
+| 1739                                                 |      5 |
+| laatste kwart 4de eeuw voor Christus                 |      5 |
+| 1610                                                 |      5 |
+| 1599                                                 |      5 |
+| 1729                                                 |      5 |
+| 1200-700 voor Christus                               |      5 |
+| 2de helft 5de eeuw voor Christus                     |      5 |
+| 1613                                                 |      5 |
+| 1727                                                 |      4 |
+| vroeg 1ste eeuw na Christus                          |      4 |
+| 1669                                                 |      4 |
+| 2de kwart 6de eeuw voor Christus                     |      4 |
+| 1668                                                 |      4 |
+| 1946                                                 |      4 |
+| 1793                                                 |      4 |
+| 1644                                                 |      4 |
+| 2de helft 7de eeuw voor Christus                     |      4 |
+| circa 400 voor Christus                              |      4 |
+| 2750-2300 voor Christus                              |      4 |
+| 1606                                                 |      4 |
+| 1698                                                 |      4 |
+| 191u                                                 |      4 |
+| 1799                                                 |      4 |
+| 1971                                                 |      4 |
+| 2de kwart 4de eeuw voor Christus                     |      4 |
+| 183u                                                 |      4 |
+| 1611                                                 |      4 |
+| 1626                                                 |      4 |
+| 184u                                                 |      4 |
+| 330-300 voor Christus                                |      4 |
+| 200 voor Christus - 200 na Christus                  |      4 |
+| 1782                                                 |      4 |
+| 1735                                                 |      4 |
+| 1772                                                 |      4 |
+| hellenistisch (vermoedelijk)                         |      4 |
+| 1790                                                 |      4 |
+| 100 voor Christus - 100 na Christus                  |      4 |
+| 1689                                                 |      4 |
+| 1673                                                 |      4 |
+| 1696                                                 |      4 |
+| 169u                                                 |      4 |
+| 1768                                                 |      4 |
+| 1769                                                 |      4 |
+| 1999                                                 |      4 |
+| 1639                                                 |      4 |
+| romeinse periode                                     |      4 |
+| 600-575 voor Christus                                |      4 |
+| 1570                                                 |      4 |
+| ca. 600 voor Christus                                |      4 |
+| 8ste-7de eeuw voor Christus                          |      4 |
+| 1736                                                 |      4 |
+| 800-600 voor Christus                                |      4 |
+| 1687                                                 |      4 |
+| 325-280 voor Christus                                |      4 |
+| vroeg 6de eeuw voor Christus                         |      4 |
+| Nieuwe Rijk dynastie 19                              |      4 |
+| 1587                                                 |      4 |
+| omstreeks 500 voor Christus                          |      4 |
+| 1589                                                 |      4 |
+| 300-250 voor Christus                                |      4 |
+| 0700                                                 |      3 |
+| 3de kwart 4de eeuw voor Christus                     |      3 |
+| 1784                                                 |      3 |
+| 1400-1200 voor Christus                              |      3 |
+| laatste kwart 6de eeuw voor Christus                 |      3 |
+| ca. 500 voor Christus                                |      3 |
+| 200-1 voor Christus                                  |      3 |
+| 0275                                                 |      3 |
+| 1400-900 voor Christus                               |      3 |
+| 1400-1000 voor Christus                              |      3 |
+| 1585                                                 |      3 |
+| 1581                                                 |      3 |
+| 1000-0 voor Christus                                 |      3 |
+| 0500                                                 |      3 |
+| 1595                                                 |      3 |
+| 1616                                                 |      3 |
+| Nieuwe Rijk Amarnatijd dynastie 18                   |      3 |
+| 1776                                                 |      3 |
+| 550 voor Christus                                    |      3 |
+| 1719                                                 |      3 |
+| 1723                                                 |      3 |
+| 1970                                                 |      3 |
+| 1967                                                 |      3 |
+| 1731                                                 |      3 |
+| 1969                                                 |      3 |
+| begin 5de eeuw voor Christus                         |      3 |
+| 1991                                                 |      3 |
+| 1582                                                 |      3 |
+| 1777                                                 |      3 |
+| 1798                                                 |      3 |
+| 1607                                                 |      3 |
+| 1716                                                 |      3 |
+| 1718                                                 |      3 |
+| 1942                                                 |      3 |
+| 2004                                                 |      3 |
+| 1676                                                 |      3 |
+| Romeinse periode                                     |      3 |
+| 14de eeuw voor Christus                              |      3 |
+| 6de eeuw voor Christus (vermoedelijk)                |      3 |
+| Middenrijk                                           |      3 |
+| 1646                                                 |      3 |
+| 1ste helft 3de eeuw voor Christus                    |      3 |
+| 1728                                                 |      3 |
+| 700-500 voor Christus                                |      3 |
+| 1717                                                 |      3 |
+| 0075                                                 |      3 |
+| 1692                                                 |      3 |
+| eind 5de eeuw voor Christus                          |      3 |
+| 1683                                                 |      3 |
+| 1947                                                 |      3 |
+| 1624                                                 |      3 |
+| 250-200 voor Christus                                |      3 |
+| 166u                                                 |      3 |
+| 1667                                                 |      3 |
+| 182u                                                 |      3 |
+| 700-600 voor Christus                                |      3 |
+| 1766                                                 |      2 |
+| 1300-1200 voor Christus                              |      2 |
+| ca. 650 voor Christus                                |      2 |
+| Middenrijk dynastie 12                               |      2 |
+| keizertijd (vermoedelijk)                            |      2 |
+| 1741                                                 |      2 |
+| 1000-500 voor Christus                               |      2 |
+| 1781                                                 |      2 |
+| 3de eeuw voor Christus of later                      |      2 |
+| 1000-750 voor Christus                               |      2 |
+| Oude Rijk (vermoedelijk)                             |      2 |
+| 2006                                                 |      2 |
+| 2001                                                 |      2 |
+| 2200-1900 voor Christus                              |      2 |
+| 2500-1400 voor Christus                              |      2 |
+| 7de eeuw voor Christus                               |      2 |
+| 1ste helft 5de eeuw voor Christus                    |      2 |
+| 1994                                                 |      2 |
+| 1617                                                 |      2 |
+| 1578                                                 |      2 |
+| 1591                                                 |      2 |
+| 1593                                                 |      2 |
+| 1734                                                 |      2 |
+| 1549                                                 |      2 |
+| 1726                                                 |      2 |
+| 1963                                                 |      2 |
+| 1586                                                 |      2 |
+| 1749                                                 |      2 |
+| 1637                                                 |      2 |
+| 0800                                                 |      2 |
+| 750-725 voor Christus                                |      2 |
+| 1789                                                 |      2 |
+| 1721                                                 |      2 |
+| 1561                                                 |      2 |
+| 0550                                                 |      2 |
+| romeinse keizertijd                                  |      2 |
+| 750-700 voor Christus                                |      2 |
+| 325-300 voor Christus of later                       |      2 |
+| 1709                                                 |      2 |
+| uuuu                                                 |      2 |
+| 0325                                                 |      2 |
+| hellenistische periode of later                      |      2 |
+| 1563                                                 |      2 |
+| 1659                                                 |      2 |
+| 1684                                                 |      2 |
+| begin 6de eeuw voor Christus                         |      2 |
+| 1580                                                 |      2 |
+| 1774                                                 |      2 |
+| 625-600 voor Christus                                |      2 |
+| 1225-1175 voor Christus                              |      2 |
+| eerste helft 6de eeuw voor Christus                  |      2 |
+| 15de eeuw voor Christus                              |      2 |
+| Nieuwe Rijk of later                                 |      2 |
+| Nieuwe Rijk (vermoedelijk)                           |      2 |
+| 1993                                                 |      2 |
+| 650 voor Christus                                    |      2 |
+| vierde eeuw voor Christus                            |      2 |
+| 0117                                                 |      2 |
+| 650-625 voor Christus                                |      2 |
+| 3000-1900 voor Christus                              |      2 |
+| 1551                                                 |      2 |
+| 3de -2de eeuw voor Christus                          |      2 |
+| circa 500 voor Christus                              |      2 |
+| 2400-1900 voor Christus                              |      2 |
+| 13de-11de eeuw voor Christus                         |      2 |
+| 1ste helft 4de eeuw voor Christus                    |      2 |
+| 1779                                                 |      2 |
+| laat 5de eeuw voor Christus                          |      2 |
+| 1638                                                 |      2 |
+| 1714                                                 |      2 |
+| laat geometrisch Ib-IIa                              |      2 |
+| 900-600 voor Christus                                |      2 |
+| laatste kwart 7de eeuw voor Christus                 |      2 |
+| 1250 voor Christus                                   |      2 |
+| 1300                                                 |      2 |
+| 0225                                                 |      2 |
+| Akkad ca.23ste eeuw voor Christus                    |      2 |
+| 1200-900 voor Christus                               |      2 |
+| 300-200 voor Christus of later                       |      2 |
+| vroeg dynastisch 3                                   |      2 |
+| 1602                                                 |      2 |
+| 0030                                                 |      2 |
+| vroeg 3de eeuw voor Christus                         |      2 |
+| 600-525 voor Christus                                |      2 |
+| Oude Rijk dynastie 6                                 |      2 |
+| 1672                                                 |      2 |
+| laatste derdedeel 2de millennium voor Christus       |      2 |
+| 1762                                                 |      2 |
+| 1200-1100 voor Christus                              |      2 |
+| 0450                                                 |      2 |
+| 1100-900 voor Christus                               |      2 |
+| prehistorisch                                        |      2 |
+| 320-280 voor Christus                                |      2 |
+| 5000-3500 voor Christus                              |      2 |
+| 3650-3550 voor Christus                              |      2 |
+| Derde Tussenperiode dynastie 21                      |      2 |
+| Midden-Minoïsch I-II                                 |      2 |
+| 0270                                                 |      2 |
+| 5800-5300 voor Christus                              |      2 |
+| 5300-4000 voor Christus                              |      2 |
+| 0509                                                 |      1 |
+| 50 voor - 50 na Christus                             |      1 |
+| Nieuwe Rijk dynastie 19 Seti I                       |      1 |
+| 413-406 voor Christus (kopie uit de twintigste eeuw) |      1 |
+| 8ste tot 7de eeuw voor Christus                      |      1 |
+| 0076                                                 |      1 |
+| einde 5de eeuw voor Christus                         |      1 |
+| 630-600 voor Christus                                |      1 |
+| 460-455 voor Christus                                |      1 |
+| Derde Tussenperiode Late Tijd dynastie 25-26         |      1 |
+| 2000-1900 voor Christus                              |      1 |
+| laat Ptolemaeisch of later                           |      1 |
+| 1941                                                 |      1 |
+| midden 1ste helft 5de eeuw voor Christus             |      1 |
+| 4000-3900 voor Christus                              |      1 |
+| 550-450 voor Christus                                |      1 |
+| 510-490 voor Christus                                |      1 |
+| 750 voor Christus                                    |      1 |
+| 1656                                                 |      1 |
+| 1565                                                 |      1 |
+| 1577                                                 |      1 |
+| Nieuwe Rijk laat                                     |      1 |
+| 1473                                                 |      1 |
+| 1597                                                 |      1 |
+| 164u                                                 |      1 |
+| 1576                                                 |      1 |
+| 1733                                                 |      1 |
+| [ca.1690]                                            |      1 |
+| 1572                                                 |      1 |
+| 1764                                                 |      1 |
+| 1755                                                 |      1 |
+| 1681                                                 |      1 |
+| 1765                                                 |      1 |
+| 1536                                                 |      1 |
+| 1746                                                 |      1 |
+| 195u                                                 |      1 |
+| 1588                                                 |      1 |
+| 1558                                                 |      1 |
+| 1645                                                 |      1 |
+| 1605                                                 |      1 |
+| 2002                                                 |      1 |
+| 1756                                                 |      1 |
+| 1559                                                 |      1 |
+| 1520                                                 |      1 |
+| 1550                                                 |      1 |
+| 1604                                                 |      1 |
+| 1678                                                 |      1 |
+| 1574                                                 |      1 |
+| 1795                                                 |      1 |
+| 1544                                                 |      1 |
+| 1943                                                 |      1 |
+| 190u                                                 |      1 |
+| 193u                                                 |      1 |
+| 181u                                                 |      1 |
+| Late Tijd dynastie 26-30 of later                    |      1 |
+| 100 - 300 na Chr                                     |      1 |
+| Ptolemaeisch 3de eeuw voor Christus                  |      1 |
+| ca. 525 voor Christus                                |      1 |
+| 600 voor Christus                                    |      1 |
+| 700-600 voor Christus (vermoedelijk)                 |      1 |
+| 400-300 voor Christus of later                       |      1 |
+| 250-225 voor Christus                                |      1 |
+| 3de-4de eeuw                                         |      1 |
+| 1ste kwart 6de eeuw voor Christus                    |      1 |
+| 1800-1600 voor Christus                              |      1 |
+| 300-0 voor Christus                                  |      1 |
+| Ptolemaeisch of later                                |      1 |
+| 22ste dynastie                                       |      1 |
+| laatste kwart 2de millennium voor Christus           |      1 |
+| Vroeg-Minoïsch IIB                                   |      1 |
+| 85-82 voor Christus                                  |      1 |
+| 5500-4500 voor Christus                              |      1 |
+| 200 voor-200 na Christus                             |      1 |
+| 2000-1600 voor Christus                              |      1 |
+| 1994-1781 voor Christus                              |      1 |
+| 26ste dynastie Psammetichus II                       |      1 |
+| 700-300 voor Christus                                |      1 |
+| 0090                                                 |      1 |
+| ca. 1900 voor Christus                               |      1 |
+| 625-575 voor Christus                                |      1 |
+| einde 2de eeuw na Christus                           |      1 |
+| vóór-/vroeg dynastisch Archaïsch                     |      1 |
+| 1400-1100 voor Christus                              |      1 |
+| 375-350 voor Christus                                |      1 |
+| 275-250 voor Christus                                |      1 |
+| Nieuwe Rijk dynastie 18 (1550-1291 v. Chr.)          |      1 |
+| 5de -4de eeuw voor Christus                          |      1 |
+| Late Tijd Saïtische dynastie 26 of later             |      1 |
+| Oude Rijk dynastie 3                                 |      1 |
+| Oude Rijk dynastie 5                                 |      1 |
+| Archaïsche periode dynastie 1                        |      1 |
+| Nieuwe Rijk dynastie 19-20                           |      1 |
+| 8ste eeuw voor Christus                              |      1 |
+| tegen midden 6de eeuw voor Christus                  |      1 |
+| Late Tijd Egypte                                     |      1 |
+| Akkad                                                |      1 |
+| omstreeks 460 voor Christus                          |      1 |
+| 300 voor Christus - 100 na Christus                  |      1 |
+| einde 6de eeuw voor Christus                         |      1 |
+| einde 7de eeuw voor Christus                         |      1 |
+| 530-520 voor Christus                                |      1 |
+| misschien 5de eeuw voor Christus                     |      1 |
+| Ur dynastie III                                      |      1 |
+| 4de eeuw voor Christus of later                      |      1 |
+| laat hellenistisch of later                          |      1 |
+| 0167                                                 |      1 |
+| 0080                                                 |      1 |
+| circa 300 voor Christus                              |      1 |
+| 150 voor Christus                                    |      1 |
+| 520-500 voor Christus                                |      1 |
+| 1000-800 voor Christus                               |      1 |
+| 225-223 voor Christus                                |      1 |
+| 1516                                                 |      1 |
+| Nieuwe Rijk dynastie 18-19                           |      1 |
+| 50 voor Christus-100                                 |      1 |
+| hellenistische epriode                               |      1 |
+| Late Tijd 7de-4de eeuw voor Christus of later        |      1 |
+| 2de -1ste eeuw voor Christus                         |      1 |
+| 1ste eeuw (vermoedelijk) na Christus                 |      1 |
+| Romeinse periode (vermoedelijk)                      |      1 |
+| vroeg hellenistisch                                  |      1 |
+| 1703                                                 |      1 |
+| 1691                                                 |      1 |
+| 1567                                                 |      1 |
+| 1524                                                 |      1 |
+| 400 voor Christus                                    |      1 |
+| 1519                                                 |      1 |
+| 1515                                                 |      1 |
+| 1521                                                 |      1 |
+| 1517                                                 |      1 |
+| 1560                                                 |      1 |
+| 1557                                                 |      1 |
+| 1555                                                 |      1 |
+| 1564                                                 |      1 |
+| 1679                                                 |      1 |
+| 1686                                                 |      1 |
+| 1584                                                 |      1 |
+| 1000 voor Christus                                   |      1 |
+| 9999                                                 |      1 |
+| 3de-2de eeuw voor Christus (vermoedelijk)            |      1 |
+| vroeg-hellenistisch (vermoedelijk)                   |      1 |
+| 600-550 voor Christus                                |      1 |
+| 530-500 voor Christus                                |      1 |
+| 4de kwart 6de eeuw voor Christus                     |      1 |
+| laatste 3de deel 7de eeuw voor Christus              |      1 |
+| laat Korinthisch                                     |      1 |
+| 26ste dynastie                                       |      1 |
+| Eerste Tussenperiode                                 |      1 |
+| predynastisch Egypte                                 |      1 |
+| Egypte Late Tijd                                     |      1 |
+| 21ste dynastie Tweede Tussenperiode                  |      1 |
+| 13de eeuw voor Christus                              |      1 |
+| 6de-4de eeuw voor Christus                           |      1 |
+| Midden-Minoïsch III - Laat-Minoïsch IIIB             |      1 |
+| 3000-2000 voor Christus                              |      1 |
+| 2400-2000 voor Christus                              |      1 |
+| 1450-1350 voor Christus                              |      1 |
+| midden 1ste eeuw na Christus (vermoedelijk)          |      1 |
+| 0218                                                 |      1 |
+| 0211                                                 |      1 |
+| Egypte Oude Rijk                                     |      1 |
+| laat hellenistisch Romeins                           |      1 |
+| 2de helft 3de eeuw voor Christus                     |      1 |
+| 425                                                  |      1 |
+| derde eeuw voor Christus                             |      1 |
+| 137 voor Christus                                    |      1 |
+| 420-395 voor Christus                                |      1 |
+| begin 4de eeuw voor Christus                         |      1 |
+| Augusteïsch omstreeks Christus                       |      1 |
+| 5de eeuw voor Christus beschildering modern          |      1 |
+| ca.350 voor Christus                                 |      1 |
+| midden 7de eeuw voor Christus                        |      1 |
+| eind 4de eeuw voor Christus                          |      1 |
+| omstreeks 400 voor Christus                          |      1 |
+| laat geometrisch Ib                                  |      1 |
+| 2de tot 1ste eeuw voor Christus                      |      1 |
+| 50 voor Christus - 25 na Christus                    |      1 |
+| na het midden van de 6de eeuw voor Christus          |      1 |
+| 3de millennium voor Christus                         |      1 |
+| 1300-1250 voor Christus                              |      1 |
+| vroege keizertijd 1ste eeuw na Christus              |      1 |
+| ca.480 voor Christus                                 |      1 |
+| 510 voor Christus                                    |      1 |
+| 0170                                                 |      1 |
+| 2000-1600 voor Christus 3de dynastie van Ur          |      1 |
+| eind 6de eeuw voor Christus                          |      1 |
+| vroege Keizertijd                                    |      1 |
+| 330 voor Christus                                    |      1 |
+| ca. 330 voor Christus                                |      1 |
+| 150-100 voor Christus                                |      1 |
+| 2de eeuw`voor Christus                               |      1 |
+| 2de helft 1ste eeuw voor-1ste eeuw na Christus       |      1 |
+| laat 1ste eeuw voor Christus                         |      1 |
+| ein 4de eeuw voor Christus of later                  |      1 |
+| laat 7de eeuw voor Christus                          |      1 |
+| laat 2de eeuw voor Christus                          |      1 |
+| 479-393 voor Christus                                |      1 |
+| 1500-400 voor Christus                               |      1 |
+| 2500-1900 voor Christus                              |      1 |
+| circa 700 voor Christus (vermoedelijk)               |      1 |
+| 0034                                                 |      1 |
+| Late Periode Egypte                                  |      1 |
+| hellenistisch 2de-1ste eeuw voor Christus            |      1 |
+| 1ste helft 1ste eeuw na Christus                     |      1 |
+| 10de-7de eeuw voor Christus                          |      1 |
+| Akkad ca. 23ste eeuw voor Christus                   |      1 |
+| Oud Babylonisch (dynastie van Hammurabi)             |      1 |
+| LH III                                               |      1 |
+| 15de-13de eeuw voor Christus                         |      1 |
+| 1ste kwart 3de eeuw voor Christus                    |      1 |
+| 0298                                                 |      1 |
+| 221-205 voor Christus                                |      1 |
+| 560-510 voor Christus                                |      1 |
+| ca. 540 voor Christus                                |      1 |
+| 1500-1400 voor Christus                              |      1 |
+| eind 6de-begin 5de eeuw voor Christus                |      1 |
+| Eerste Tussenperiode dynastie 9-10                   |      1 |
+| vroeg 3de millennium voor Christus                   |      1 |
+| begin christelijke jaartelling                       |      1 |
+| Negada II                                            |      1 |
+| kopie 20e eeuw (vermoedelijk)                        |      1 |
+| 47-46 voor Christus                                  |      1 |
+| 550-456 voor Christus                                |      1 |
+| 600-300 voor Christus                                |      1 |
+| 1350-1000 voor Christus                              |      1 |
+| 1300-1000 voor Christus                              |      1 |
+| 2de helft 2de millennium voor Christus               |      1 |
+| circa 700 voor Christus                              |      1 |
+| 0175                                                 |      1 |
+| 900-800 voor Christus                                |      1 |
+| Oude Rijk                                            |      1 |
+| Eerste Tussenperiode dynastie 11                     |      1 |
+| 2550-1700 voor Christus                              |      1 |
+| 338-315 voor Christus                                |      1 |
+| 1000                                                 |      1 |
+| 610 voor Christus                                    |      1 |
+| 0900                                                 |      1 |
+| 560-545 voor Christus                                |      1 |
+| laatste derdedeel van 2de millennium voor Christus   |      1 |
+| Neolithicum                                          |      1 |
+| ca.2050 voor Christus                                |      1 |
+| Ptolemaeisch 2de eeuw voor Christus                  |      1 |
+| vroeg 2de millennium voor Christus of later          |      1 |
+| 26ste eeuw voor Christus                             |      1 |
+| 2de kwart 5e eeuw voor Christus                      |      1 |
+| 0307                                                 |      1 |
+| 19 voor Christus                                     |      1 |
+| 2100-2000 voor Christus                              |      1 |
+| 0041                                                 |      1 |
+| 50-25 voor Christus                                  |      1 |
+| 2de helft 1ste eeuw voor Christus                    |      1 |
+| 1325-1275 voor Christus                              |      1 |
+| 2de helft 8ste eeuw voor Christus                    |      1 |
+| 0130                                                 |      1 |
+| Ptolemaeisch 332-30 voor Christus                    |      1 |
+| 0068                                                 |      1 |
+| 0592                                                 |      1 |
+| 0523                                                 |      1 |
+| 2400-1800 voor Christus                              |      1 |
+| Amarna periode 13de eeuw voor Christus               |      1 |
+| 1000-600 voor Christus                               |      1 |
+| 0125                                                 |      1 |
+| 0159                                                 |      1 |
+| 527-430 voor Christus                                |      1 |
+| 800-700 voor Christus                                |      1 |
+| 0-100 na Christus of later                           |      1 |
+| 500 voor Christus                                    |      1 |
+| 600-575 voor Christus of eerder                      |      1 |
+| 0208                                                 |      1 |
+| circa 800 voor Christus (vermoedelijk)               |      1 |
+| 2de eeuw voor - 1ste eeuw na Christus                |      1 |
+| 1500-1300 voor Christus                              |      1 |
+| neo Babylonisch                                      |      1 |
+| 400 voor Christus - 200 na Christus                  |      1 |
+| 167u                                                 |      1 |
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="p">[</span><span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2022</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span> <span class="o">=</span> <span class="n">alma_beeldbank</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1       16
+20       5
+30       2
+34       1
+41       1
+        ..
+2002     1
+2004     3
+2005     5
+2006     2
+2007    13
+Name: date, Length: 498, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plt.figure(figsize=(8,4),dpi=200)</span>
+<span class="c1"># sns.countplot(x=&#39;date&#39;, data=alma_beeldbank)</span>
+<span class="c1"># plt.xticks(size=10)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">alma_beeldbank</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x7f7a6e94d2b0&gt;
+</pre></div>
+</div>
+<img alt="_images/data_exploration_19_1.png" src="_images/data_exploration_19_1.png" />
+</div>
+</div>
+<section id="some-analysis-of-the-descriptions">
+<h2>Some analysis of the descriptions<a class="headerlink" href="#some-analysis-of-the-descriptions" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">joined</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alma_beeldbank</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code copied from: https://jingwen-z.github.io/data-viz-with-matplotlib-series9-word-cloud/</span>
+
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">853</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                      <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/data_exploration_22_0.png" src="_images/data_exploration_22_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="beeldbank-marc">
+<h1>Beeldbank marc<a class="headerlink" href="#beeldbank-marc" title="Permalink to this headline">#</a></h1>
+<section id="short-analysis-of-the-beeldbank-marc-data">
+<h2>short analysis of the beeldbank marc data<a class="headerlink" href="#short-analysis-of-the-beeldbank-marc-data" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vergelijking van marc en dublin core record. </span>
+<span class="c1"># een aantal velden missen/maar waren hoogstwaarschijnlijk niet nuttig geacht. </span>
+
+<span class="n">example_record</span> <span class="o">=</span> <span class="n">alma_beeldbank_marc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_record</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;comparison with </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">alma_beeldbank</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>marc extension, <a class="reference external" href="https://diensten.uba.uva.nl/open_data/downloads/uva_alma_archobjects_marc_new.tar.gz">download</a> first edited from xml to marc using <a class="reference external" href="https://marcedit.reeset.net/downloads">marc editing tool</a>.</p>
+</section>
+</section>
+<section id="theater-dataset">
+<h1>theater dataset<a class="headerlink" href="#theater-dataset" title="Permalink to this headline">#</a></h1>
+<section id="preprocessing-done-on-the-theatre-collections-dataset">
+<h2>preprocessing done on the theatre collections dataset.<a class="headerlink" href="#preprocessing-done-on-the-theatre-collections-dataset" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_xml</span><span class="p">(</span><span class="s1">&#39;data/wwwopac_TIN_limit100000.xml&#39;</span><span class="p">)</span>
+<span class="n">tin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># just one record</span>
+<span class="n">tin_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_xml</span><span class="p">(</span><span class="s1">&#39;data/theatercollecties_test1.xml&#39;</span><span class="p">)</span>
+<span class="n">tin_1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mapping-from-xml-data-format-to-lod-format">
+<h2>mapping from XML data format to LOD format<a class="headerlink" href="#mapping-from-xml-data-format-to-lod-format" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">code below provides a mapping from xml format to LOD format. </span>
+<span class="sd">some fields were considered as a test. </span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="c1"># read in data</span>
+<span class="n">tin_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_xml</span><span class="p">(</span><span class="s1">&#39;data/theatercollecties_test1.xml&#39;</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">tin_1</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">tin_1</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">first_valid_index</span><span class="p">()]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">tin_1</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="c1"># expects list of tuples: [(&#39;column name&#39;, &#39;column_value&#39;), ..., ]</span>
+<span class="k">def</span> <span class="nf">to_lod</span><span class="p">(</span><span class="n">input_field</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;creator&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;http://purl.org/dc/elements/1.1/creator&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;creator.role&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;http://purl.org/dc/elements/1.1/creator&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;performance.title&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/title/&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;production.date&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;http://purl.org/dc/elements/1.1/date&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;reproduction.reference&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;http://purl.org/dc/elements/1.1/identifier&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;object_category&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/type/&#39;</span><span class="p">,</span> <span class="n">input_field</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">input_field</span>
+
+<span class="c1"># maps input to appropriate output format</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">to_lod</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">tin_1</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">values</span><span class="p">)))</span>
+<span class="n">lod_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;predicate&#39;</span><span class="p">,</span> <span class="s1">&#39;object&#39;</span><span class="p">])</span>
+<span class="n">lod_result</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ai.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">AI</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AP & BLM<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

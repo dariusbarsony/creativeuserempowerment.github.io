@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data &#8212; CUE</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data exploration" href="notebooks/data_exploration.html" />
+    <link rel="prev" title="Documentation of Experiments" href="projects.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cue.html">xCurator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Documentation of Experiments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/data_exploration.html">Data exploration</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="misc.html">Misc links</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beeldbank">Beeldbank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tin">TIN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copyright-disclaimer">Copyright disclaimer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorrect-terms-or-terms-with-a-negative-connotation">Incorrect terms or terms with a negative connotation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cct-cross-cultural-timeline">CCT - Cross Cultural Timeline</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data">
+<h1>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h1>
+<p>This is an overview of the various datasets that will be used. Some relevant links at the UvA Library:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uba.uva.nl/en/support/open-data/open-data.html">Open data</a></p></li>
+<li><p><a class="reference external" href="https://uba.uva.nl/en/support/open-data/data-sets-and-publication-channels/data-sets-and-publication-channels.html">Datasets and publication channels</a></p></li>
+<li><p><a class="reference external" href="https://uba.uva.nl/en/support/open-data/linked-data/linked-data.html">Linked Data</a></p></li>
+<li><p><a class="reference external" href="https://uba.uva.nl/en/support/open-data/licences/licences.html">Licences</a></p></li>
+</ul>
+<section id="beeldbank">
+<h2>Beeldbank<a class="headerlink" href="#beeldbank" title="Permalink to this heading">#</a></h2>
+<p>Images can be retrieved <a class="reference external" href="https://servicetin.adlibhosting.com/te4/wwwopac.ashx?command=getcontent&amp;server=images&amp;value=992001743.jpg&amp;width=800&amp;height=800">like this</a></p>
+<p>In the dumps on disk, the exported XML files from <code class="docutils literal notranslate"><span class="pre">uva_alma_beeldbank_dc_new.xml</span></code> look like this:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ns0:dc</span><span class="w"> </span><span class="na">xmlns:dc=</span><span class="s">&quot;http://purl.org/dc/elements/1.1/&quot;</span><span class="w"> </span><span class="na">xmlns:ns0=</span><span class="s">&quot;http://www.openarchives.org/OAI/2.0/oai_dc/&quot;</span>
+<span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:title&gt;</span>Architecture,<span class="w"> </span>peinture<span class="w"> </span>et<span class="w"> </span>sculpture<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>maison<span class="w"> </span>de<span class="w"> </span>ville<span class="w"> </span>d&#39;Amsterdam,<span class="w"> </span>repr<span class="ni">&amp;#233;</span>sent<span class="ni">&amp;#233;</span>e<span class="w"> </span>en<span class="w"> </span>CIX
+figures<span class="w"> </span>en<span class="w"> </span>taille-douce<span class="w"> </span>...<span class="nt">&lt;/dc:title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:title&gt;</span>Architecture,<span class="w"> </span>peinture<span class="w"> </span>et<span class="w"> </span>sculpture<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>maison<span class="w"> </span>de<span class="w"> </span>ville<span class="w"> </span>d&#39;Amsterdam,<span class="w"> </span>repr<span class="ni">&amp;#233;</span>sent<span class="ni">&amp;#233;</span>e<span class="w"> </span>en<span class="w"> </span>109
+figures<span class="w"> </span>en<span class="w"> </span>taille-douce<span class="nt">&lt;/dc:title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>Titelblad<span class="w"> </span>in<span class="w"> </span>rood<span class="w"> </span>en<span class="w"> </span>zwart<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>Oorspronkelijk<span class="w"> </span>impressum<span class="w"> </span>overgeplakt<span class="w"> </span>met<span class="w"> </span>strookje<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>Auteurs:<span class="w"> </span>Jacob<span class="w"> </span>van<span class="w"> </span>Campen,<span class="w"> </span>Hubertus<span class="w"> </span>Quellinus<span class="w"> </span>en<span class="w"> </span>Artus<span class="w"> </span>Quellinus<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>A-E<span class="w"> </span>2<span class="w"> </span>F1<span class="w"> </span>en<span class="w"> </span>109<span class="w"> </span>gegraveerde<span class="w"> </span>bladen<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>Elektronische<span class="w"> </span>reproductie<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>gedigitaliseerd<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:description&gt;</span>Beschrijving<span class="w"> </span>gedrukte<span class="w"> </span>uitgave<span class="nt">&lt;/dc:description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:publisher&gt;</span>A<span class="w"> </span>Amsterdam<span class="w"> </span>chez<span class="w"> </span>Gerard<span class="w"> </span>Valk<span class="nt">&lt;/dc:publisher&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:contributor&gt;</span>Campen,<span class="w"> </span>Jacob<span class="w"> </span>van,<span class="w"> </span>architect/bouwmeester,<span class="w"> </span>1595-1657.<span class="w"> </span>(NL-LeOCL)069356742
+https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839192425805131.jsonld<span class="nt">&lt;/dc:contributor&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:contributor&gt;</span>Quellinus,<span class="w"> </span>Hubertus,<span class="w"> </span>schilder,<span class="w"> </span>graveur,<span class="w"> </span>1605?-1688.<span class="w"> </span>(NL-LeOCL)069925631
+https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839197814305131.jsonld<span class="nt">&lt;/dc:contributor&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:contributor&gt;</span>Quellinus,<span class="w"> </span>Artus<span class="w"> </span>(Artus),<span class="w"> </span>beeldhouwer,<span class="w"> </span>1609-1668.<span class="w"> </span>(NL-LeOCL)091438969
+https://open-na.hosted.exlibrisgroup.com/alma/31UKB_UAM1_INST/authorities/9839288655305131.jsonld<span class="nt">&lt;/dc:contributor&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:date&gt;</span>1719<span class="nt">&lt;/dc:date&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:date&gt;</span>1719<span class="nt">&lt;/dc:date&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:type&gt;</span>text<span class="nt">&lt;/dc:type&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:type</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:identifier&gt;</span>https://hdl.handle.net/11245/3.3680<span class="nt">&lt;/dc:identifier&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:language&gt;</span>fre<span class="nt">&lt;/dc:language&gt;</span>
+<span class="w">  </span><span class="nt">&lt;dc:relation&gt;</span>Architecture,<span class="w"> </span>peinture<span class="w"> </span>et<span class="w"> </span>sculpture<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>maison<span class="w"> </span>de<span class="w"> </span>ville<span class="w"> </span>d&#39;Amsterdam,<span class="w"> </span>repr<span class="ni">&amp;#233;</span>sent<span class="ni">&amp;#233;</span>e<span class="w"> </span>en<span class="w"> </span>CIX
+figures<span class="w"> </span>en<span class="w"> </span>taille-douce<span class="w"> </span>...<span class="nt">&lt;/dc:relation&gt;</span>
+<span class="nt">&lt;/ns0:dc&gt;</span>
+</pre></div>
+</div>
+<p>The Beeldbank is available as <a class="reference external" href="https://lod.uba.uva.nl/UB-UVA/Beeldbank/">Linked Open Data</a></p>
+<p>The record in the LOD looks like this:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>predicate</p></th>
+<th class="head"><p>object</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></p></td>
+<td><p><a class="reference external" href="http://www.europeana.eu/schemas/edm/ProvidedCHO">http://www.europeana.eu/schemas/edm/ProvidedCHO</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">http://www.w3.org/1999/02/22-rdf-syntax-ns#type</a></p></td>
+<td><p><a class="reference external" href="https://schema.org/Book">https://schema.org/Book</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/terms/extent">http://purl.org/dc/terms/extent</a></p></td>
+<td><p>1 online resource (22 p., 109 bl) titelvignet, portr., grav</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.w3.org/2000/01/rdf-schema#label">http://www.w3.org/2000/01/rdf-schema#label</a></p></td>
+<td><p>Architecture, peinture et sculpture de la maison de ville d’Amsterdam, représentée en CIX figures en taille-douce …</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.europeana.eu/schemas/edm/isShownBy">http://www.europeana.eu/schemas/edm/isShownBy</a></p></td>
+<td><p><a class="reference external" href="https://images.uba.uva.nl/iiif/2/erfgoed!4!3!3!003527334!UBAGWOL63-905_001.jpg/full/full/0/default.jpg">https://images.uba.uva.nl/iiif/2/erfgoed!4!3!3!003527334!UBAGWOL63-905_001.jpg/full/full/0/default.jpg</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a></p></td>
+<td><p><a class="reference external" href="http://data.bibliotheken.nl/id/thes/p069925631">http://data.bibliotheken.nl/id/thes/p069925631</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/contributor">http://purl.org/dc/elements/1.1/contributor</a></p></td>
+<td><p><a class="reference external" href="http://data.bibliotheken.nl/id/thes/p091438969">http://data.bibliotheken.nl/id/thes/p091438969</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/creator">http://purl.org/dc/elements/1.1/creator</a></p></td>
+<td><p><a class="reference external" href="http://data.bibliotheken.nl/id/thes/p069356742">http://data.bibliotheken.nl/id/thes/p069356742</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a></p></td>
+<td><p>1719</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>Beschrijving gedrukte uitgave</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>gedigitaliseerd 2018 Amsterdam, Bibliotheek UvA/HvA NL-AmU</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>Titelblad in rood en zwart</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>A-E 2 F1 en 109 gegraveerde bladen</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>Auteurs: Jacob van Campen, Hubertus Quellinus en Artus Quellinus</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/description">http://purl.org/dc/elements/1.1/description</a></p></td>
+<td><p>Oorspronkelijk impressum overgeplakt met strookje</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/identifier">http://purl.org/dc/elements/1.1/identifier</a></p></td>
+<td><p><a class="reference external" href="https://hdl.handle.net/11245/3.3680">https://hdl.handle.net/11245/3.3680</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/language">http://purl.org/dc/elements/1.1/language</a></p></td>
+<td><p><a class="reference external" href="http://id.loc.gov/vocabulary/languages/fre">http://id.loc.gov/vocabulary/languages/fre</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/publisher">http://purl.org/dc/elements/1.1/publisher</a></p></td>
+<td><p>A Amsterdam, chez Gerard Valk</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/source">http://purl.org/dc/elements/1.1/source</a></p></td>
+<td><p>Elektronische reproductie Amsterdam Bibliotheek UvA/HvA 2018 Gedigitaliseerd exemplaar: OTM: OL 63-905 NL-AmU</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a></p></td>
+<td><p>Architecture, peinture et sculpture de la maison de ville d’Amsterdam, représentée en CIX figures en taille-douce …</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></td>
+<td><p><a class="reference external" href="http://vocab.getty.edu/aat/300028051">http://vocab.getty.edu/aat/300028051</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></td>
+<td><p>Electronic books</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></td>
+<td><p>book</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/elements/1.1/type">http://purl.org/dc/elements/1.1/type</a></p></td>
+<td><p>tekst</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/terms/alternative">http://purl.org/dc/terms/alternative</a></p></td>
+<td><p>Architecture, peinture et sculpture de la maison de ville d’Amsterdam, représentée en 109 figures en taille-douce</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/terms/isFormatOf">http://purl.org/dc/terms/isFormatOf</a></p></td>
+<td><p>Gedrukte uitgave: Campen, Jacob van, 1595-1657 Architecture, peinture et sculpture de la maison de ville d’Amsterdam, représentée en CIX figures en taille-douce … A Amsterdam, : chez Gerard Valk, 1719 (OCoLC)69044401</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/terms/medium">http://purl.org/dc/terms/medium</a></p></td>
+<td><p>computer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://purl.org/dc/terms/medium">http://purl.org/dc/terms/medium</a></p></td>
+<td><p>online bron</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://purl.org/dc/terms/spatial">http://purl.org/dc/terms/spatial</a></p></td>
+<td><p><a class="reference external" href="http://id.loc.gov/vocabulary/countries/ne">http://id.loc.gov/vocabulary/countries/ne</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp">http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp">http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp</a></p></td>
+<td><p>1719</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a></p></td>
+<td><p><a class="reference external" href="https://images.uba.uva.nl/iiif/2/erfgoed!4!3!3!003527334!UBAGWOL63-905_001.jpg/full/full/0/default.jpg">https://images.uba.uva.nl/iiif/2/erfgoed!4!3!3!003527334!UBAGWOL63-905_001.jpg/full/full/0/default.jpg</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From the above, we can see that using the LOD dump of the Beeldbank is the shortest route to a working dataset for some AI analysis in terms of proof-of-concepts.</p>
+</div>
+</section>
+<section id="tin">
+<h2>TIN<a class="headerlink" href="#tin" title="Permalink to this heading">#</a></h2>
+<p>A selection was made, <a class="reference external" href="https://servicetin.adlibhosting.com/te4/wwwopac.ashx?command=search&amp;database=collectTEphotos3&amp;search=pointer%20353&amp;output=xml&amp;limit=100.000&amp;startfrom=1&amp;xmltype=grouped">759 Properties under own management</a></p>
+<p>Metadata records can be retrieved <a class="reference external" href="https://servicetin.adlibhosting.com/te4/wwwopac.ashx?command=search&amp;database=collectCUE&amp;search=pointer%20108&amp;output=xml&amp;startfrom=1&amp;xmltype=grouped">like this</a></p>
+<p>Images can be retrieved <a class="reference external" href="https://servicetin.adlibhosting.com/te4/wwwopac.ashx?command=getcontent&amp;server=images&amp;value=992001743.jpg&amp;width=800&amp;height=800">like this</a></p>
+<p>From the disk dump <code class="docutils literal notranslate"><span class="pre">wwwopac_TIN_limit100000.xml</span></code> records look like this:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span><span class="w"> </span><span class="na">priref=</span><span class="s">&quot;41745&quot;</span><span class="w"> </span><span class="na">created=</span><span class="s">&quot;2008-06-23T12:24:50&quot;</span><span class="w"> </span><span class="na">modification=</span><span class="s">&quot;2016-11-30T12:58:07&quot;</span><span class="w"> </span><span class="na">selected=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;creator&gt;</span>Roelofs,<span class="w"> </span>Charles<span class="nt">&lt;/creator&gt;</span>
+<span class="w">  </span><span class="nt">&lt;creator&gt;</span>Moritz,<span class="w"> </span>Ernst<span class="nt">&lt;/creator&gt;</span>
+<span class="w">  </span><span class="nt">&lt;creator.role&gt;</span>ontwerp<span class="nt">&lt;/creator.role&gt;</span>
+<span class="w">  </span><span class="nt">&lt;creator.role&gt;</span>fotografie<span class="nt">&lt;/creator.role&gt;</span>
+<span class="w">  </span><span class="nt">&lt;performance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;New_collect_field&gt;</span>Gelegenheidscombinaties<span class="nt">&lt;/New_collect_field&gt;</span>
+<span class="w">    </span><span class="nt">&lt;performance.production_code&gt;</span>123890453.001<span class="nt">&lt;/performance.production_code&gt;</span>
+<span class="w">    </span><span class="nt">&lt;performance.title&gt;</span>Aias<span class="nt">&lt;/performance.title&gt;</span>
+<span class="w">    </span><span class="nt">&lt;performance.title.lref&gt;</span>21012<span class="nt">&lt;/performance.title.lref&gt;</span>
+<span class="w">    </span><span class="nt">&lt;production.date&gt;</span>1939-05-23<span class="nt">&lt;/production.date&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/performance&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Reproduction&gt;</span>
+<span class="w">    </span><span class="nt">&lt;reproduction.identifier_URL&gt;</span>qm00217.000.jpg<span class="nt">&lt;/reproduction.identifier_URL&gt;</span>
+<span class="w">    </span><span class="nt">&lt;reproduction.reference&gt;</span>qm00217.000<span class="nt">&lt;/reproduction.reference&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Reproduction&gt;</span>
+<span class="w">  </span><span class="nt">&lt;institution.name&gt;</span>Theater<span class="w"> </span>Instituut<span class="w"> </span>Nederland<span class="nt">&lt;/institution.name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;object_category&gt;</span>maquette<span class="nt">&lt;/object_category&gt;</span>
+<span class="w">  </span><span class="nt">&lt;object_name&gt;</span>maquette<span class="nt">&lt;/object_name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;object_number&gt;</span>qm00217.000<span class="nt">&lt;/object_number&gt;</span>
+<span class="w">  </span><span class="nt">&lt;priref&gt;</span>41745<span class="nt">&lt;/priref&gt;</span>
+<span class="w">  </span><span class="nt">&lt;production.date.start&gt;</span>1937<span class="nt">&lt;/production.date.start&gt;</span>
+<span class="w">  </span><span class="nt">&lt;title&gt;</span>Aias<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/record&gt;</span>
+</pre></div>
+</div>
+<p>We can see that the TIN set is not available in a LOD format like the Beeldbank, so some data conversion and mapping is required.</p>
+<section id="copyright-disclaimer">
+<h3>Copyright disclaimer<a class="headerlink" href="#copyright-disclaimer" title="Permalink to this heading">#</a></h3>
+<p>The content of the TIN website is protected by copyright and may not be reproduced, published or distributed without permission from Allard Pierson. Allard Pierson/Stichting TiN is not the rightful owner of the displayed images. Works of which the maker died more than 70 years ago are royalty-free (Dutch Public Domain). For most of the more recent creations you need to require permission from the copyright holders before we provide high-resolution files.
+For more information about copyright, see the Copyright Information Site of the University Library.
+To request or use (reproductions of) photo or video material, please contact <a class="reference external" href="mailto:theatercollectie&#37;&#52;&#48;uva&#46;nl">theatercollectie<span>&#64;</span>uva<span>&#46;</span>nl</a>. Rates are available on request.
+Loan applications go through Allard Pierson.</p>
+</section>
+<section id="incorrect-terms-or-terms-with-a-negative-connotation">
+<h3>Incorrect terms or terms with a negative connotation<a class="headerlink" href="#incorrect-terms-or-terms-with-a-negative-connotation" title="Permalink to this heading">#</a></h3>
+<p>We are aware that titles, descriptions or images shown may contain incorrect terms, loaded terms or terms with a negative connotation. If you have any questions or comments about this, please contact <a class="reference external" href="mailto:theatercollectie&#37;&#52;&#48;uva&#46;nl">theatercollectie<span>&#64;</span>uva<span>&#46;</span>nl</a>.</p>
+</section>
+</section>
+<section id="cct-cross-cultural-timeline">
+<h2>CCT - Cross Cultural Timeline<a class="headerlink" href="#cct-cross-cultural-timeline" title="Permalink to this heading">#</a></h2>
+<p>As used in the exhibition space at the museum. Can be access at this link: <a class="reference external" href="https://allardpierson.crossculture.ie/api/">https://allardpierson.crossculture.ie/api/</a></p>
+<p>An example entry looks like:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;object_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apm-5f0974f3029ff&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;object_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;inventory_num&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blaeu kast&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1664&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1750&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;startperiod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ad&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;endperiod&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ad&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;latlng&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;52.37458165865567, 4.892420053465686&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;theme&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mobility&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title_en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Atlas Maior by Joan Blaeu&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title_nl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; Grooten atlas, oft werelt-beschrijving&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sketchfab_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;other&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;about_en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;span style=\&quot;font-size:18px\&quot;&gt;In the 17th century, trade and shipping flourished in Amsterdam. The VOC was founded, new sea routes were explored and voyages of discovery yielded not only a great deal of money but also new geographical knowledge. As a result, the world view became increasingly &amp;#39;stretched&amp;#39; and improved. Amsterdam&amp;#39;s cartography played a major role in the development and dissemination of that world view. One highlight was the Atlas Maior, which was launched in various editions and languages by the Amsterdam printer, publisher and map maker Joan Blaeu in 1662.&lt;/span&gt; \\n\r\n\r\n&amp;nbsp; \\n\r\n&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;about_nl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;span style=\&quot;font-size:18px\&quot;&gt;In de 17de eeuw&amp;nbsp;kwamen de handel en zeevaart in Amsterdam tot grote bloei. De VOC werd opgericht, nieuwe zeeroutes werden verkend en ontdekkingsreizen leverden behalve veel geld ook nieuwe geografische kennis op. Het wereldbeeld werd daardoor steeds verder &amp;lsquo;opgerekt&amp;#39; en verbeterd. In de ontwikkeling en verspreiding van dat wereldbeeld speelde de Amsterdamse cartografie een grote rol. Een hoogtepunt vormde de Atlas Maior of Grooten Atlas, vanaf 1662 in verschillende edities en talen op de markt gebracht door de Amsterdamse drukker, uitgever en kaartenmaker Joan Blaeu.&lt;/span&gt; \\n\r\n&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;material_en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;material_nl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufactured_en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; Grooten atlas, oft werelt-beschrijving&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;manufactured_nl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; Grooten atlas, oft werelt-beschrijving&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;findspot_en&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Amsterdam, J. Blaeu, 1664&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;findspot_nl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Amsterdam, J. Blaeu, 1664 &quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wim Hupperetz&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ccid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ccid5e17d20c12ad1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;viewcounter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;129&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;object_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apm-5f0974f3029ff&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;De atlas maior in de Nederlandse canon&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;about&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;\r\n&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;vimeo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blaeukabinet.png&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{\&quot;tags\&quot;:[\&quot;none\&quot;,\&quot;\&quot;]}&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-07-12 17:47:15&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Wim Hupperetz&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;ccid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ccid5e17d20c12ad1&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;images&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blaeukabinet.png&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blaeu Cabinet 1664&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bleau_detail.png&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;caption&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Under which URIs can the images that are mentioned be retrieved?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="projects.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Documentation of Experiments</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="notebooks/data_exploration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Data exploration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beeldbank">Beeldbank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tin">TIN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copyright-disclaimer">Copyright disclaimer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorrect-terms-or-terms-with-a-negative-connotation">Incorrect terms or terms with a negative connotation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cct-cross-cultural-timeline">CCT - Cross Cultural Timeline</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By AP & BLM
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

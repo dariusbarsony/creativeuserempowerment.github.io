@@ -1,0 +1,3603 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Takeaways from the report &#8212; CUE</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/use_case_audience';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cue.html">xCurator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Documentation of Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_exploration.html">Data exploration</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">Misc links</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/use_case_audience.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Takeaways from the report</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="takeaways-from-the-report">
+<h1>Takeaways from the report<a class="headerlink" href="#takeaways-from-the-report" title="Permalink to this heading">#</a></h1>
+<p>” Women with digital affinity prefer “making connections visible” and “individual recommendations”.”</p>
+<p>” People with a strong digital affinity favor “Individual Recommendations”. Less important respondents cited “text creation”, “speech recognition”, “AI-generated art”, “emotion recognition”, “image recognition” and “generation of stories”. “</p>
+<p>” It was considered particularly important that AI should contribute to accessibility, but somewhat more important for womenthan for men. The preference for automatic translations is at the forefront. “</p>
+<p>summary: making connections visible, individual reccomendations, contribute to accessibility</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a document containing a short overview of use case data of the BLM</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># this is a document containing a short overview of use case data of the BLM</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the data made available by the BLM </span>
+<span class="c1"># a user survey on use cases of the museum</span>
+<span class="c1"># an analysis was done too by the FH Kiel</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;data/Use_Case_Audience_Segmentation/Seminar_FH_Kiel/Abgabe_SOM_Badisches_Landesmuseum/&#39;</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;umfrageonline-2728300.xlsx&#39;</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_Antwort-ID</th>
+      <th>Resume-Code</th>
+      <th>Start</th>
+      <th>Datum und Zeit</th>
+      <th>Teilnahmestatus</th>
+      <th>1. Aus datenschutzrechtlichen Gründen ist die Teilnahme an der Befragung nur möglich, wenn Sie ausdrücklich eingewilligt haben und bestätigen, dass Sie die Informationen zum Datenschutz gelesen und verstanden haben.  Hinweis: Bei Aktivierung des Links wird Ihre IP-Adresse erfasst. Sie wird aber nicht mit Ihren Antworten zusammengeführt, so dass Ihre Angaben anonym bleiben. Ihre IP-Adresse wird in einem europäischen Rechenzentrum (Region Irland) von AWS gespeichert.  AWS hat seinen Sitz in der USA und muss, falls angefordert, die Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie hiergegen gerichtlich vorgehen könnten. Auf diese Verarbeitungstätigkeiten haben wir keinen Einfluss.    Die folgenden Informationen zum Datenschutz habe ich gelesen und verstanden.</th>
+      <th>2. Ich möchte an der Umfrage teilnehmen.</th>
+      <th>3. Ich bin</th>
+      <th>4. Mein Alter</th>
+      <th>5. test</th>
+      <th>...</th>
+      <th>24. Eine Künstliche Intelligenz im Museum würde mir besonders helfen durch</th>
+      <th>Untertitel und Alternativen für Audio und Video</th>
+      <th>Text-Alternativen für Nicht-Text-Inhalte</th>
+      <th>Leichte Sprache</th>
+      <th>Automatische Übersetzungen</th>
+      <th>Textfeld.6</th>
+      <th>25. Meine digitale Affinität ist</th>
+      <th>26. Meine Freizeit  pro Woche beträgt:</th>
+      <th>27. Besonders wichtig ist mir:</th>
+      <th>28. Ich möchte noch folgendes sagen:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>86917460</td>
+      <td>c8a6468</td>
+      <td>24.09.2021 11:15</td>
+      <td>04.10.2021 09:40</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Um die Möglichkeiten von KI bewerten zu können...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>86943674</td>
+      <td>dfa6fbd</td>
+      <td>26.09.2021 02:46</td>
+      <td>26.09.2021 02:50</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>männlich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>86948343</td>
+      <td>dbf254e</td>
+      <td>26.09.2021 13:19</td>
+      <td>26.09.2021 13:24</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>weiblich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>78.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>86955706</td>
+      <td>6c0b076</td>
+      <td>26.09.2021 23:16</td>
+      <td>26.09.2021 23:25</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>männlich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>77.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>Die leichte Zugänglichkeit der sonst nicht aus...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>86961527</td>
+      <td>18ceb92</td>
+      <td>27.09.2021 09:45</td>
+      <td>27.09.2021 09:56</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>weiblich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Bei der Umfrage fehlten mir ein paar Auswahlmö...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>87903202</td>
+      <td>6b220c9</td>
+      <td>30.10.2021 15:50</td>
+      <td>30.10.2021 16:16</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>männlich</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>55.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>87903769</td>
+      <td>a87047c</td>
+      <td>30.10.2021 17:01</td>
+      <td>30.10.2021 17:04</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>männlich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>87904963</td>
+      <td>d7eb30f</td>
+      <td>30.10.2021 18:44</td>
+      <td>30.10.2021 18:48</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>weiblich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>63.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>87910773</td>
+      <td>841039b</td>
+      <td>31.10.2021 11:49</td>
+      <td>31.10.2021 12:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>männlich</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>87911699</td>
+      <td>8fcad1d</td>
+      <td>31.10.2021 13:26</td>
+      <td>31.10.2021 13:30</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>weiblich</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>71.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>120 rows × 115 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">archaeology</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Antike &amp;amp; Archäologie&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gender</span><span class="p">(</span><span class="n">input_field</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;männlich&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;weiblich&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;divers&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">archaeology</span><span class="p">[</span><span class="s1">&#39;3. Ich bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">archaeology</span><span class="p">[</span><span class="s1">&#39;3. Ich bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">gender</span><span class="p">)</span>
+<span class="n">archaeology</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1994/1372153362.py:11: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  archaeology[&#39;3. Ich bin&#39;] = archaeology[&#39;3. Ich bin&#39;].apply(gender)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_Antwort-ID</th>
+      <th>Resume-Code</th>
+      <th>Start</th>
+      <th>Datum und Zeit</th>
+      <th>Teilnahmestatus</th>
+      <th>1. Aus datenschutzrechtlichen Gründen ist die Teilnahme an der Befragung nur möglich, wenn Sie ausdrücklich eingewilligt haben und bestätigen, dass Sie die Informationen zum Datenschutz gelesen und verstanden haben.  Hinweis: Bei Aktivierung des Links wird Ihre IP-Adresse erfasst. Sie wird aber nicht mit Ihren Antworten zusammengeführt, so dass Ihre Angaben anonym bleiben. Ihre IP-Adresse wird in einem europäischen Rechenzentrum (Region Irland) von AWS gespeichert.  AWS hat seinen Sitz in der USA und muss, falls angefordert, die Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie hiergegen gerichtlich vorgehen könnten. Auf diese Verarbeitungstätigkeiten haben wir keinen Einfluss.    Die folgenden Informationen zum Datenschutz habe ich gelesen und verstanden.</th>
+      <th>2. Ich möchte an der Umfrage teilnehmen.</th>
+      <th>3. Ich bin</th>
+      <th>4. Mein Alter</th>
+      <th>5. test</th>
+      <th>...</th>
+      <th>24. Eine Künstliche Intelligenz im Museum würde mir besonders helfen durch</th>
+      <th>Untertitel und Alternativen für Audio und Video</th>
+      <th>Text-Alternativen für Nicht-Text-Inhalte</th>
+      <th>Leichte Sprache</th>
+      <th>Automatische Übersetzungen</th>
+      <th>Textfeld.6</th>
+      <th>25. Meine digitale Affinität ist</th>
+      <th>26. Meine Freizeit  pro Woche beträgt:</th>
+      <th>27. Besonders wichtig ist mir:</th>
+      <th>28. Ich möchte noch folgendes sagen:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>86943674</td>
+      <td>dfa6fbd</td>
+      <td>26.09.2021 02:46</td>
+      <td>26.09.2021 02:50</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>86948343</td>
+      <td>dbf254e</td>
+      <td>26.09.2021 13:19</td>
+      <td>26.09.2021 13:24</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>78.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>86955706</td>
+      <td>6c0b076</td>
+      <td>26.09.2021 23:16</td>
+      <td>26.09.2021 23:25</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>77.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>Die leichte Zugänglichkeit der sonst nicht aus...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>86961991</td>
+      <td>57b9a74</td>
+      <td>27.09.2021 09:58</td>
+      <td>27.09.2021 10:01</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>86962068</td>
+      <td>51c952f</td>
+      <td>27.09.2021 10:00</td>
+      <td>27.09.2021 10:06</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>69.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>86969185</td>
+      <td>f3a2950</td>
+      <td>27.09.2021 12:53</td>
+      <td>27.09.2021 12:56</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>86980765</td>
+      <td>ed2a156</td>
+      <td>27.09.2021 17:59</td>
+      <td>27.09.2021 18:02</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>47.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>86992795</td>
+      <td>a564515</td>
+      <td>28.09.2021 09:06</td>
+      <td>28.09.2021 10:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>86995338</td>
+      <td>ecc7649</td>
+      <td>28.09.2021 10:28</td>
+      <td>28.09.2021 14:30</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>81.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>87000389</td>
+      <td>a49ca8c</td>
+      <td>28.09.2021 12:48</td>
+      <td>28.09.2021 12:51</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>87016282</td>
+      <td>cce4b3b</td>
+      <td>28.09.2021 22:38</td>
+      <td>28.09.2021 22:47</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Die Bevorzugung zwischen digitalem und anologe...</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>87018127</td>
+      <td>a516e2a</td>
+      <td>29.09.2021 06:12</td>
+      <td>29.09.2021 06:22</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>76.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>87035413</td>
+      <td>d01254e</td>
+      <td>29.09.2021 16:20</td>
+      <td>29.09.2021 16:29</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>16.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>87036278</td>
+      <td>6d04e9b</td>
+      <td>29.09.2021 16:54</td>
+      <td>29.09.2021 16:59</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>87041311</td>
+      <td>67b06fd</td>
+      <td>29.09.2021 20:03</td>
+      <td>29.09.2021 20:11</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>87084133</td>
+      <td>b704ec2</td>
+      <td>01.10.2021 13:26</td>
+      <td>01.10.2021 13:30</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>87100269</td>
+      <td>835d614</td>
+      <td>02.10.2021 11:48</td>
+      <td>02.10.2021 12:12</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>-1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>92.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>87107809</td>
+      <td>a5f57b4</td>
+      <td>03.10.2021 07:46</td>
+      <td>03.10.2021 07:55</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>70.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>87107829</td>
+      <td>19ac043</td>
+      <td>03.10.2021 07:51</td>
+      <td>03.10.2021 07:58</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>87107845</td>
+      <td>ac404bd</td>
+      <td>03.10.2021 07:54</td>
+      <td>03.10.2021 07:58</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>87108006</td>
+      <td>563bd78</td>
+      <td>03.10.2021 08:26</td>
+      <td>03.10.2021 08:35</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>47.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>87108312</td>
+      <td>3d28ec7</td>
+      <td>03.10.2021 09:14</td>
+      <td>03.10.2021 09:28</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>64.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>87109771</td>
+      <td>896d351</td>
+      <td>03.10.2021 11:50</td>
+      <td>03.10.2021 12:04</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>62.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>digitale Angebote sind für mich wichtig, da me...</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>87110680</td>
+      <td>15ab18c</td>
+      <td>03.10.2021 13:15</td>
+      <td>03.10.2021 13:38</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>59.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Vielen herzlichen Dank für das gewinnbringende...</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>87111542</td>
+      <td>fa71cbc</td>
+      <td>03.10.2021 13:07</td>
+      <td>03.10.2021 14:58</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>79.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>87133919</td>
+      <td>f472b90</td>
+      <td>04.10.2021 14:06</td>
+      <td>04.10.2021 14:14</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>51.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>87135816</td>
+      <td>f9b7c79</td>
+      <td>04.10.2021 14:55</td>
+      <td>04.10.2021 15:00</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>85.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>87252552</td>
+      <td>50524c9</td>
+      <td>08.10.2021 08:25</td>
+      <td>08.10.2021 08:31</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>87283885</td>
+      <td>938faf7</td>
+      <td>09.10.2021 08:49</td>
+      <td>09.10.2021 08:54</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>87293585</td>
+      <td>e5ad89d</td>
+      <td>09.10.2021 18:19</td>
+      <td>09.10.2021 18:29</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>63.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>87307708</td>
+      <td>076c3f0</td>
+      <td>10.10.2021 17:29</td>
+      <td>10.10.2021 17:34</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>-1</td>
+      <td>60 Jahre und älter</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>45.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>87358481</td>
+      <td>62aba31</td>
+      <td>12.10.2021 12:47</td>
+      <td>12.10.2021 12:52</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>87363625</td>
+      <td>e2b37d9</td>
+      <td>12.10.2021 15:01</td>
+      <td>12.10.2021 15:07</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>87364025</td>
+      <td>5b42db3</td>
+      <td>12.10.2021 15:11</td>
+      <td>12.10.2021 15:17</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>87422618</td>
+      <td>e281f78</td>
+      <td>14.10.2021 12:45</td>
+      <td>14.10.2021 12:50</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>85.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>87436764</td>
+      <td>280f31e</td>
+      <td>14.10.2021 21:03</td>
+      <td>14.10.2021 21:08</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>77.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>87437651</td>
+      <td>8718cd0</td>
+      <td>14.10.2021 21:53</td>
+      <td>14.10.2021 21:57</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>56.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>87437968</td>
+      <td>8751a20</td>
+      <td>14.10.2021 22:13</td>
+      <td>14.10.2021 22:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Verlassen wir das kleine lokale Haus, gerne Ve...</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>87441306</td>
+      <td>703914d</td>
+      <td>15.10.2021 06:41</td>
+      <td>15.10.2021 06:49</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>87441856</td>
+      <td>15cf4c3</td>
+      <td>15.10.2021 07:21</td>
+      <td>15.10.2021 07:27</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Die Umfrage ist leider nicht sehr Handy freund...</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>87443536</td>
+      <td>096f387</td>
+      <td>15.10.2021 08:45</td>
+      <td>15.10.2021 08:47</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>95.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>87495512</td>
+      <td>44cf014</td>
+      <td>18.10.2021 07:38</td>
+      <td>18.10.2021 07:42</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>59.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>87522076</td>
+      <td>d070c41</td>
+      <td>18.10.2021 20:03</td>
+      <td>18.10.2021 20:07</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>71.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>87566713</td>
+      <td>36c46de</td>
+      <td>20.10.2021 10:20</td>
+      <td>20.10.2021 10:25</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>87576318</td>
+      <td>3d79a31</td>
+      <td>20.10.2021 13:14</td>
+      <td>20.10.2021 14:06</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>53.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>87614348</td>
+      <td>9196f13</td>
+      <td>21.10.2021 17:28</td>
+      <td>21.10.2021 17:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>87705253</td>
+      <td>e65eb6a</td>
+      <td>24.10.2021 11:22</td>
+      <td>24.10.2021 11:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>46.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>87770011</td>
+      <td>79f2256</td>
+      <td>26.10.2021 10:10</td>
+      <td>26.10.2021 10:27</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Vorschläge was mir noch gefällt</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Ich möchte unabhängig durchs Museum gehen könn...</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>87791609</td>
+      <td>6d23daa</td>
+      <td>26.10.2021 18:43</td>
+      <td>26.10.2021 18:48</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>87804545</td>
+      <td>90996b6</td>
+      <td>27.10.2021 09:39</td>
+      <td>27.10.2021 09:48</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>87816983</td>
+      <td>94a6b40</td>
+      <td>27.10.2021 14:16</td>
+      <td>27.10.2021 14:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Meine Güte, seid doch nicht so textlastig! KI ...</td>
+      <td>90.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>87872736</td>
+      <td>9842c15</td>
+      <td>29.10.2021 09:32</td>
+      <td>29.10.2021 09:53</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>67.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Vermittlungsangebote, bei dem ich etwas mit de...</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>87875818</td>
+      <td>7657b43</td>
+      <td>29.10.2021 11:03</td>
+      <td>29.10.2021 11:18</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>78.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Homepage ist unübersichtlich. Vermittelt keine...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>87903202</td>
+      <td>6b220c9</td>
+      <td>30.10.2021 15:50</td>
+      <td>30.10.2021 16:16</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>55.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>87903769</td>
+      <td>a87047c</td>
+      <td>30.10.2021 17:01</td>
+      <td>30.10.2021 17:04</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>30-59 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>87910773</td>
+      <td>841039b</td>
+      <td>31.10.2021 11:49</td>
+      <td>31.10.2021 12:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>15-29 Jahre</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>56 rows × 115 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">input_field</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;15-29 Jahre&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;30-59 Jahre&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">input_field</span> <span class="o">==</span> <span class="s1">&#39;60 Jahre und älter&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">archaeology</span><span class="p">[</span><span class="s1">&#39;4. Mein Alter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">archaeology</span><span class="p">[</span><span class="s1">&#39;4. Mein Alter&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">archaeology</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1994/2780041146.py:11: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  archaeology[&#39;4. Mein Alter&#39;] = archaeology[&#39;4. Mein Alter&#39;].apply(age)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_Antwort-ID</th>
+      <th>Resume-Code</th>
+      <th>Start</th>
+      <th>Datum und Zeit</th>
+      <th>Teilnahmestatus</th>
+      <th>1. Aus datenschutzrechtlichen Gründen ist die Teilnahme an der Befragung nur möglich, wenn Sie ausdrücklich eingewilligt haben und bestätigen, dass Sie die Informationen zum Datenschutz gelesen und verstanden haben.  Hinweis: Bei Aktivierung des Links wird Ihre IP-Adresse erfasst. Sie wird aber nicht mit Ihren Antworten zusammengeführt, so dass Ihre Angaben anonym bleiben. Ihre IP-Adresse wird in einem europäischen Rechenzentrum (Region Irland) von AWS gespeichert.  AWS hat seinen Sitz in der USA und muss, falls angefordert, die Daten an Sicherheitsbehörden herauszugeben, ohne dass Sie hiergegen gerichtlich vorgehen könnten. Auf diese Verarbeitungstätigkeiten haben wir keinen Einfluss.    Die folgenden Informationen zum Datenschutz habe ich gelesen und verstanden.</th>
+      <th>2. Ich möchte an der Umfrage teilnehmen.</th>
+      <th>3. Ich bin</th>
+      <th>4. Mein Alter</th>
+      <th>5. test</th>
+      <th>...</th>
+      <th>24. Eine Künstliche Intelligenz im Museum würde mir besonders helfen durch</th>
+      <th>Untertitel und Alternativen für Audio und Video</th>
+      <th>Text-Alternativen für Nicht-Text-Inhalte</th>
+      <th>Leichte Sprache</th>
+      <th>Automatische Übersetzungen</th>
+      <th>Textfeld.6</th>
+      <th>25. Meine digitale Affinität ist</th>
+      <th>26. Meine Freizeit  pro Woche beträgt:</th>
+      <th>27. Besonders wichtig ist mir:</th>
+      <th>28. Ich möchte noch folgendes sagen:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>86943674</td>
+      <td>dfa6fbd</td>
+      <td>26.09.2021 02:46</td>
+      <td>26.09.2021 02:50</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>86948343</td>
+      <td>dbf254e</td>
+      <td>26.09.2021 13:19</td>
+      <td>26.09.2021 13:24</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>78.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>86955706</td>
+      <td>6c0b076</td>
+      <td>26.09.2021 23:16</td>
+      <td>26.09.2021 23:25</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>77.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>Die leichte Zugänglichkeit der sonst nicht aus...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>86961991</td>
+      <td>57b9a74</td>
+      <td>27.09.2021 09:58</td>
+      <td>27.09.2021 10:01</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>86962068</td>
+      <td>51c952f</td>
+      <td>27.09.2021 10:00</td>
+      <td>27.09.2021 10:06</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>69.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>86969185</td>
+      <td>f3a2950</td>
+      <td>27.09.2021 12:53</td>
+      <td>27.09.2021 12:56</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>86980765</td>
+      <td>ed2a156</td>
+      <td>27.09.2021 17:59</td>
+      <td>27.09.2021 18:02</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>47.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>86992795</td>
+      <td>a564515</td>
+      <td>28.09.2021 09:06</td>
+      <td>28.09.2021 10:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>86995338</td>
+      <td>ecc7649</td>
+      <td>28.09.2021 10:28</td>
+      <td>28.09.2021 14:30</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>81.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>87000389</td>
+      <td>a49ca8c</td>
+      <td>28.09.2021 12:48</td>
+      <td>28.09.2021 12:51</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>87016282</td>
+      <td>cce4b3b</td>
+      <td>28.09.2021 22:38</td>
+      <td>28.09.2021 22:47</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Die Bevorzugung zwischen digitalem und anologe...</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>87018127</td>
+      <td>a516e2a</td>
+      <td>29.09.2021 06:12</td>
+      <td>29.09.2021 06:22</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>76.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>87035413</td>
+      <td>d01254e</td>
+      <td>29.09.2021 16:20</td>
+      <td>29.09.2021 16:29</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>16.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>87036278</td>
+      <td>6d04e9b</td>
+      <td>29.09.2021 16:54</td>
+      <td>29.09.2021 16:59</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>87041311</td>
+      <td>67b06fd</td>
+      <td>29.09.2021 20:03</td>
+      <td>29.09.2021 20:11</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>87084133</td>
+      <td>b704ec2</td>
+      <td>01.10.2021 13:26</td>
+      <td>01.10.2021 13:30</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>87100269</td>
+      <td>835d614</td>
+      <td>02.10.2021 11:48</td>
+      <td>02.10.2021 12:12</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>-1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>92.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>87107809</td>
+      <td>a5f57b4</td>
+      <td>03.10.2021 07:46</td>
+      <td>03.10.2021 07:55</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>70.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>87107829</td>
+      <td>19ac043</td>
+      <td>03.10.2021 07:51</td>
+      <td>03.10.2021 07:58</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>74.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>87107845</td>
+      <td>ac404bd</td>
+      <td>03.10.2021 07:54</td>
+      <td>03.10.2021 07:58</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>87108006</td>
+      <td>563bd78</td>
+      <td>03.10.2021 08:26</td>
+      <td>03.10.2021 08:35</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>47.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>87108312</td>
+      <td>3d28ec7</td>
+      <td>03.10.2021 09:14</td>
+      <td>03.10.2021 09:28</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>64.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>87109771</td>
+      <td>896d351</td>
+      <td>03.10.2021 11:50</td>
+      <td>03.10.2021 12:04</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>62.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>digitale Angebote sind für mich wichtig, da me...</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>87110680</td>
+      <td>15ab18c</td>
+      <td>03.10.2021 13:15</td>
+      <td>03.10.2021 13:38</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>59.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Vielen herzlichen Dank für das gewinnbringende...</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>87111542</td>
+      <td>fa71cbc</td>
+      <td>03.10.2021 13:07</td>
+      <td>03.10.2021 14:58</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>79.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>87133919</td>
+      <td>f472b90</td>
+      <td>04.10.2021 14:06</td>
+      <td>04.10.2021 14:14</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>51.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>87135816</td>
+      <td>f9b7c79</td>
+      <td>04.10.2021 14:55</td>
+      <td>04.10.2021 15:00</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>85.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>87252552</td>
+      <td>50524c9</td>
+      <td>08.10.2021 08:25</td>
+      <td>08.10.2021 08:31</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>87283885</td>
+      <td>938faf7</td>
+      <td>09.10.2021 08:49</td>
+      <td>09.10.2021 08:54</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>87293585</td>
+      <td>e5ad89d</td>
+      <td>09.10.2021 18:19</td>
+      <td>09.10.2021 18:29</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>63.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>87307708</td>
+      <td>076c3f0</td>
+      <td>10.10.2021 17:29</td>
+      <td>10.10.2021 17:34</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>-1</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>45.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>87358481</td>
+      <td>62aba31</td>
+      <td>12.10.2021 12:47</td>
+      <td>12.10.2021 12:52</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>87363625</td>
+      <td>e2b37d9</td>
+      <td>12.10.2021 15:01</td>
+      <td>12.10.2021 15:07</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>87364025</td>
+      <td>5b42db3</td>
+      <td>12.10.2021 15:11</td>
+      <td>12.10.2021 15:17</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>87422618</td>
+      <td>e281f78</td>
+      <td>14.10.2021 12:45</td>
+      <td>14.10.2021 12:50</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>85.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>87436764</td>
+      <td>280f31e</td>
+      <td>14.10.2021 21:03</td>
+      <td>14.10.2021 21:08</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>77.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>87437651</td>
+      <td>8718cd0</td>
+      <td>14.10.2021 21:53</td>
+      <td>14.10.2021 21:57</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>56.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>87437968</td>
+      <td>8751a20</td>
+      <td>14.10.2021 22:13</td>
+      <td>14.10.2021 22:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>mehr als 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Verlassen wir das kleine lokale Haus, gerne Ve...</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>87441306</td>
+      <td>703914d</td>
+      <td>15.10.2021 06:41</td>
+      <td>15.10.2021 06:49</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>87441856</td>
+      <td>15cf4c3</td>
+      <td>15.10.2021 07:21</td>
+      <td>15.10.2021 07:27</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Die Umfrage ist leider nicht sehr Handy freund...</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>87443536</td>
+      <td>096f387</td>
+      <td>15.10.2021 08:45</td>
+      <td>15.10.2021 08:47</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>95.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>87495512</td>
+      <td>44cf014</td>
+      <td>18.10.2021 07:38</td>
+      <td>18.10.2021 07:42</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>59.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>87522076</td>
+      <td>d070c41</td>
+      <td>18.10.2021 20:03</td>
+      <td>18.10.2021 20:07</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>71.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>87566713</td>
+      <td>36c46de</td>
+      <td>20.10.2021 10:20</td>
+      <td>20.10.2021 10:25</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>87576318</td>
+      <td>3d79a31</td>
+      <td>20.10.2021 13:14</td>
+      <td>20.10.2021 14:06</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>53.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>87614348</td>
+      <td>9196f13</td>
+      <td>21.10.2021 17:28</td>
+      <td>21.10.2021 17:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>87705253</td>
+      <td>e65eb6a</td>
+      <td>24.10.2021 11:22</td>
+      <td>24.10.2021 11:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>46.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>87770011</td>
+      <td>79f2256</td>
+      <td>26.10.2021 10:10</td>
+      <td>26.10.2021 10:27</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Vorschläge was mir noch gefällt</td>
+      <td>100.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Modernisierung &amp;amp, Selbstverwirklichung</td>
+      <td>Ich möchte unabhängig durchs Museum gehen könn...</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>87791609</td>
+      <td>6d23daa</td>
+      <td>26.10.2021 18:43</td>
+      <td>26.10.2021 18:48</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>87804545</td>
+      <td>90996b6</td>
+      <td>27.10.2021 09:39</td>
+      <td>27.10.2021 09:48</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>87816983</td>
+      <td>94a6b40</td>
+      <td>27.10.2021 14:16</td>
+      <td>27.10.2021 14:21</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Meine Güte, seid doch nicht so textlastig! KI ...</td>
+      <td>90.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>87872736</td>
+      <td>9842c15</td>
+      <td>29.10.2021 09:32</td>
+      <td>29.10.2021 09:53</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>67.0</td>
+      <td>11 bis 20 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Vermittlungsangebote, bei dem ich etwas mit de...</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>87875818</td>
+      <td>7657b43</td>
+      <td>29.10.2021 11:03</td>
+      <td>29.10.2021 11:18</td>
+      <td>teilgenommen, aber noch nicht beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>78.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>Homepage ist unübersichtlich. Vermittelt keine...</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>87903202</td>
+      <td>6b220c9</td>
+      <td>30.10.2021 15:50</td>
+      <td>30.10.2021 16:16</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>55.0</td>
+      <td>21 bis 30 Stunden</td>
+      <td>Neuorientierung &amp;amp, Sachlichkeit</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>87903769</td>
+      <td>a87047c</td>
+      <td>30.10.2021 17:01</td>
+      <td>30.10.2021 17:04</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>87910773</td>
+      <td>841039b</td>
+      <td>31.10.2021 11:49</td>
+      <td>31.10.2021 12:32</td>
+      <td>teilgenommen und beendet</td>
+      <td>ja</td>
+      <td>ja</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>100.0</td>
+      <td>höchstens 10 Stunden</td>
+      <td>Tradition &amp;amp, Ordnung</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>56 rows × 115 columns</p>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By AP & BLM
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
