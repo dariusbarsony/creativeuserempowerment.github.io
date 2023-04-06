@@ -1,0 +1,1091 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>exhibition catalogs &#8212; CUE</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="models.html" />
+    <link rel="prev" title="Data" href="../data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CUE</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cue.html">
+   xCurator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../projects.html">
+   Documentation of Experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   exhibition catalogs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../misc.html">
+   Misc links
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/data_preprocessing.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/data_preprocessing.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   exhibition catalogs
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extract-text">
+     extract text
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     import csv
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-data">
+     analyse data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-preprocessing">
+     text preprocessing
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#egypte-nl">
+     Egypte_nl
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-the-right-text-egypte">
+     finding the right text Egypte
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obtaining-the-ground-truth">
+   obtaining the ground truth
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#match-page-numbers-to-pages-book">
+     match page numbers to pages book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>exhibition catalogs</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   exhibition catalogs
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extract-text">
+     extract text
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-csv">
+     import csv
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-data">
+     analyse data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-preprocessing">
+     text preprocessing
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#egypte-nl">
+     Egypte_nl
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-the-right-text-egypte">
+     finding the right text Egypte
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obtaining-the-ground-truth">
+   obtaining the ground truth
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#match-page-numbers-to-pages-book">
+     match page numbers to pages book
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="exhibition-catalogs">
+<h1>exhibition catalogs<a class="headerlink" href="#exhibition-catalogs" title="Permalink to this headline">#</a></h1>
+<p>extract text from: Sicily EN, Crossroads NL, crossroads EN, Eeuwig Egypte NL, Rome EN</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importing required modules </span>
+<span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">dirname</span> <span class="o">=</span> <span class="s1">&#39;../data/catalogs/&#39;</span>
+
+<span class="c1"># filenames: </span>
+<span class="n">ROME_EN</span> <span class="o">=</span> <span class="s1">&#39;Rome_EN_LR_compleet&#39;</span>
+<span class="n">EGYPTE_NL</span> <span class="o">=</span> <span class="s1">&#39;Eeuwig_Egypte_NL_LR&#39;</span>
+<span class="n">CROSSROADS_NL</span> <span class="o">=</span> <span class="s1">&#39;CrossRoads_NEDERLANDS_LR_compleet&#39;</span>
+<span class="n">CROSSROADS_EN</span> <span class="o">=</span> <span class="s1">&#39;CrossRoads_ENGELS_LR_compleet&#39;</span>
+<span class="n">SICILY_EN</span> <span class="o">=</span> <span class="s1">&#39;sicily_en&#39;</span>
+
+<span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="n">ROME_EN</span><span class="p">,</span> <span class="n">EGYPTE_NL</span><span class="p">,</span> <span class="n">CROSSROADS_EN</span><span class="p">,</span> <span class="n">CROSSROADS_NL</span><span class="p">,</span> <span class="n">SICILY_EN</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="extract-text">
+<h2>extract text<a class="headerlink" href="#extract-text" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span> 
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;extract_&#39;</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+
+        <span class="c1"># creating a csv writer object </span>
+        <span class="n">csvwriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span> 
+         
+        <span class="c1"># writing the fields </span>
+        <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> 
+
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="n">dirname</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pagei</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">)):</span>
+            <span class="n">page</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">[</span><span class="n">pagei</span><span class="p">]</span>
+            <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">page</span><span class="o">.</span><span class="n">extract_text</span><span class="p">()])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># writing the fields </span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">csvwriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span> 
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="n">dirname</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="k">for</span> <span class="n">pagei</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">)):</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">page</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">pages</span><span class="p">[</span><span class="n">pagei</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;PdfReader&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-csv">
+<h2>import csv<a class="headerlink" href="#import-csv" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;extract_&#39;</span> <span class="o">+</span> <span class="n">EGYPTE_NL</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analyse-data">
+<h2>analyse data<a class="headerlink" href="#analyse-data" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code copied from: https://jingwen-z.github.io/data-viz-with-matplotlib-series9-word-cloud/</span>
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">wordcloud</span><span class="o">.</span><span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">853</span><span class="p">,</span> <span class="n">margin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                      <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">([</span><span class="n">corpus</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># plt.savefig(&#39;descriptions_wordcloud.png&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="text-preprocessing">
+<h2>text preprocessing<a class="headerlink" href="#text-preprocessing" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">RegexpTokenizer</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="c1"># expects dataframe as input</span>
+<span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span><span class="n">book</span><span class="p">):</span>
+    
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;extract_&#39;</span> <span class="o">+</span> <span class="n">book</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RegexpTokenizer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\w+&#39;</span><span class="p">)</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+
+    <span class="n">corpus</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)):</span>
+
+        <span class="c1"># tokenize</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="c1"># filter stop words convert to lower</span>
+        <span class="n">filtered_sentence</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">query</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+
+        <span class="c1"># filter digits</span>
+        <span class="n">filtered_sentence</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">filtered_sentence</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">w</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()]</span>
+
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered_sentence</span><span class="p">)</span>
+        <span class="n">corpus</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered_sentence</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">df</span><span class="p">,</span> <span class="n">corpus</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">,</span> <span class="n">corpus</span> <span class="o">=</span> <span class="n">preprocess</span><span class="p">(</span><span class="n">EGYPTE_NL</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corpus</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;processed_egypte_nl.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="egypte-nl">
+<h2>Egypte_nl<a class="headerlink" href="#egypte-nl" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">91</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RegexpTokenizer</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\w+&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">credits</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits</span> <span class="o">=</span> <span class="n">credits</span><span class="p">[</span><span class="n">credits</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;omslag&#39;</span><span class="p">):</span> <span class="n">credits</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;nederlands&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">credits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">apm_egypte</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\d{4,}&#39;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">credits</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">apm_egypte</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pages_apm_egypte</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(blz\s)(\d+)(.*?)blz&#39;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">credits</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pages_apm_egypte</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pages_apm_egypte</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels_egypte</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">apm</span> <span class="ow">in</span> <span class="n">pages_apm_egypte</span><span class="p">:</span>
+    <span class="n">labels_egypte</span> <span class="o">+=</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\d{4,}&#39;</span><span class="p">,</span> <span class="n">apm</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels_egypte</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mapping</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">pages</span> <span class="o">=</span> <span class="p">[(</span><span class="n">start</span><span class="p">,</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> 
+    <span class="n">mapping</span> <span class="o">+=</span> <span class="n">pages</span>
+    <span class="n">start</span> <span class="o">+=</span> <span class="mi">2</span>
+    
+<span class="n">mapping</span> <span class="o">+=</span> <span class="p">[</span><span class="n">start</span><span class="p">]</span>
+<span class="n">mapping</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-the-right-text-egypte">
+<h2>finding the right text Egypte<a class="headerlink" href="#finding-the-right-text-egypte" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="obtaining-the-ground-truth">
+<h1>obtaining the ground truth<a class="headerlink" href="#obtaining-the-ground-truth" title="Permalink to this headline">#</a></h1>
+<p>obtaining the apm numbers from the ‘illustratie verantwoording’</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">apm</span><span class="p">(</span><span class="n">descr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;(?:APM)\s*\d+&#39;</span><span class="p">,</span> <span class="n">descr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">credits_crossroads</span> <span class="o">=</span> <span class="s1">&#39; 10 above (APM16324),  </span><span class="se">\n</span><span class="s1">13 (APM13822, APM9370),  </span><span class="se">\n</span><span class="s1">29 above (APM7855),  51 (APM9276, APM9278, APM9280),  52 (APM16772),  </span><span class="se">\n</span><span class="s1">66 (APM7468),  </span><span class="se">\n</span><span class="s1">67 (APM12995),  </span><span class="se">\n</span><span class="s1">69, 71 (APM7798),  </span><span class="se">\n</span><span class="s1">72 (APM16388),  73 (APM3830),  </span><span class="se">\n</span><span class="s1">74 (APM7798),  </span><span class="se">\n</span><span class="s1">103 below (APM12974), </span><span class="se">\n</span><span class="s1">146 (APM8471),  147 (APM8107),  </span><span class="se">\n</span><span class="s1">162 (APM7071),  163 left (APM09163),  </span><span class="se">\n</span><span class="s1">163 right (APM15589),  </span><span class="se">\n</span><span class="s1">176 above (APM16369), 180 (APM3831, APM10998)&#39;</span>
+<span class="n">page_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">146</span><span class="p">,</span> <span class="mi">147</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">163</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">references_crossroads</span> <span class="o">=</span> <span class="n">apm</span><span class="p">(</span><span class="n">credits_crossroads</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">references_crossroads</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">page_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="match-page-numbers-to-pages-book">
+<h2>match page numbers to pages book<a class="headerlink" href="#match-page-numbers-to-pages-book" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">page_offset</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mapping</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">page_numbers</span><span class="p">,</span> <span class="n">references_crossroads</span><span class="p">)</span>
+<span class="n">mapping</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pageid</span><span class="p">,</span> <span class="n">apm</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
+    <span class="n">labels</span><span class="p">[</span><span class="n">pageid</span> <span class="o">+</span> <span class="n">page_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">apm</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;crossroads.csv&quot;</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Inventory numbers Allard</span>
+<span class="n">Pierson</span> <span class="n">Museum</span>
+<span class="n">Cover</span><span class="p">:</span> <span class="mi">14232</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">16751</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">28</span><span class="p">:</span> <span class="mi">3493</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">31</span><span class="p">:</span> <span class="mi">3271</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">33</span><span class="p">:</span> <span class="mi">7802</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">35</span><span class="p">:</span> <span class="n">above</span> <span class="mi">7164</span><span class="p">,</span> <span class="n">below</span> <span class="mi">7316</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">37</span><span class="p">:</span> <span class="mi">7971</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">38</span><span class="p">:</span> <span class="mi">9227</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">40</span><span class="p">:</span> <span class="mi">16883</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">41</span><span class="p">:</span> <span class="mi">16228</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">43</span><span class="p">:</span> <span class="mi">13055</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">45</span><span class="p">:</span> <span class="mi">1379</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">48</span><span class="p">:</span> <span class="mi">13937</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">50</span><span class="p">:</span> <span class="n">above</span> <span class="mi">12378</span><span class="p">,</span> <span class="n">below</span>
+<span class="mi">10167</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">52</span><span class="p">:</span> <span class="mi">13825</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">53</span><span class="p">:</span> <span class="mi">1627</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">55</span><span class="p">:</span> <span class="mi">7347</span> <span class="ow">and</span> <span class="mi">7349</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">56</span><span class="p">:</span> <span class="mi">7286</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">57</span><span class="p">:</span> <span class="mi">7359</span> <span class="ow">and</span> <span class="mi">13963</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">59</span><span class="p">:</span> <span class="mi">7326</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">61</span><span class="p">:</span> <span class="mi">2907</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">62</span><span class="p">:</span> <span class="mi">1786</span> <span class="p">(</span><span class="n">photo</span> <span class="n">Restauratieatelier</span>
+<span class="n">Restaura</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">64</span><span class="p">:</span> <span class="n">above</span> <span class="mi">3239</span> <span class="ow">and</span> <span class="mi">2845</span><span class="p">,</span>
+<span class="n">below</span> <span class="mi">1785</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">65</span><span class="p">:</span> <span class="mi">788</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">69</span><span class="p">:</span> <span class="mi">1892</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">72</span><span class="p">:</span> <span class="mi">8343</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">73</span><span class="p">:</span> <span class="n">above</span> <span class="mi">13946</span><span class="p">,</span>
+<span class="n">below</span> <span class="mi">15758</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">74</span><span class="p">:</span> <span class="n">above</span> <span class="mi">15369</span> <span class="ow">and</span> <span class="mi">15370</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">75</span><span class="p">:</span> <span class="mi">14005</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">76</span><span class="p">:</span> <span class="mi">6349</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">77</span><span class="p">:</span> <span class="mi">12428</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">78</span><span class="p">:</span> <span class="mi">7592</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">80</span><span class="p">:</span> <span class="mi">15396</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">81</span><span class="p">:</span> <span class="mi">8188</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">82</span><span class="p">:</span> <span class="mi">3242</span> <span class="ow">and</span> <span class="mi">3243</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">84</span><span class="p">:</span> <span class="n">above</span> <span class="mi">9374</span><span class="p">,</span> <span class="n">below</span> <span class="mi">1774</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">85</span><span class="p">:</span> <span class="mi">8180</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">86</span><span class="p">:</span> <span class="mi">3269</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">87</span><span class="p">:</span> <span class="mi">3422</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">92</span><span class="p">:</span> <span class="mi">12</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">93</span> <span class="n">above</span> <span class="mi">1606</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">95</span><span class="p">:</span> <span class="mi">8552</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">96</span><span class="p">:</span> <span class="mi">35</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">97</span><span class="p">:</span> <span class="n">above</span> <span class="mi">12417</span><span class="p">,</span> <span class="n">below</span>
+<span class="mi">12534</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">100</span><span class="p">:</span> <span class="n">above</span> <span class="mi">7066</span><span class="p">,</span> <span class="mi">8124</span><span class="p">,</span> <span class="mi">8116</span><span class="p">,</span>
+<span class="n">below</span> <span class="mi">8117</span><span class="p">,</span> <span class="mi">7065</span><span class="p">,</span> <span class="mi">8120</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">101</span><span class="p">:</span> <span class="mi">7974</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">102</span><span class="p">:</span> <span class="mi">7757</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">103</span><span class="p">:</span> <span class="mi">8133</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">104</span><span class="p">:</span> <span class="n">left</span> <span class="mi">7288</span><span class="p">,</span> <span class="mi">7290</span><span class="p">,</span> <span class="mi">7874</span>
+<span class="ow">and</span> <span class="mi">8023</span><span class="p">,</span> <span class="n">right</span> <span class="mi">725</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">105</span><span class="p">:</span> <span class="mi">7768</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">107</span><span class="p">:</span> <span class="mf">8146.001</span><span class="o">-</span><span class="mi">009</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">108</span><span class="p">:</span> <span class="mi">8169</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">109</span><span class="p">:</span> <span class="mi">16217</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">110</span><span class="p">:</span> <span class="mi">16166</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">115</span><span class="p">:</span> <span class="mi">9234</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">118</span><span class="p">:</span> <span class="mi">1674</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">119</span><span class="p">:</span> <span class="mi">15076</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">122</span><span class="p">:</span> <span class="mi">1402</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">123</span><span class="p">:</span> <span class="mi">8016</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">124</span><span class="p">:</span> <span class="mi">7799</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">126</span><span class="p">:</span> <span class="mi">8175</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">128</span><span class="p">:</span> <span class="mi">7946</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">131</span><span class="p">:</span> <span class="mi">11972</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">132</span><span class="p">:</span> <span class="mi">1765</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">133</span><span class="p">:</span> <span class="mi">15914</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">137</span><span class="p">:</span> <span class="mi">5205</span><span class="p">,</span> <span class="mi">5208</span><span class="p">,</span> <span class="mi">5216</span><span class="p">,</span> <span class="mi">5220</span><span class="p">,</span>
+<span class="mi">5222</span><span class="p">,</span> <span class="mi">5230</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">139</span><span class="p">:</span> <span class="mi">15927</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">140</span><span class="p">:</span> <span class="mi">9894</span><span class="o">-</span><span class="mi">9900</span><span class="p">,</span> <span class="mi">10675</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">141</span><span class="p">:</span> <span class="mi">9350</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">142</span><span class="p">:</span> <span class="mi">8133</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">143</span><span class="p">:</span> <span class="mi">7022</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">144</span><span class="p">:</span> <span class="mi">6295</span><span class="p">,</span> <span class="mi">6296</span><span class="p">,</span> <span class="mi">7304</span><span class="p">,</span>
+<span class="mi">7308</span><span class="p">,</span> <span class="mi">14165</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">145</span><span class="p">:</span> <span class="mi">7001</span><span class="p">,</span> <span class="mi">7003</span><span class="p">,</span> <span class="mi">7004</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">146</span><span class="p">:</span> <span class="mi">724</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">148</span><span class="p">:</span> <span class="mi">1687</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">151</span><span class="p">:</span> <span class="n">above</span> <span class="mi">15746</span><span class="p">,</span> <span class="n">below</span>
+<span class="mi">1722</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">153</span><span class="p">:</span> <span class="mi">8363</span><span class="p">,</span> <span class="mi">319</span><span class="p">,</span> <span class="mi">1681</span><span class="p">,</span> <span class="mi">6319</span><span class="p">,</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">156</span><span class="p">:</span> <span class="mf">12.324</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">157</span><span class="p">:</span> <span class="n">left</span> <span class="mi">16618</span><span class="p">,</span> <span class="n">right</span> <span class="mi">12481</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">158</span><span class="p">:</span> <span class="n">above</span> <span class="mi">15689</span><span class="p">,</span>
+<span class="n">below</span> <span class="mi">15999</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">161</span><span class="p">:</span> <span class="mi">451</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">162</span><span class="p">:</span> <span class="mi">3579</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">163</span><span class="p">:</span> <span class="mi">7163</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">164</span><span class="p">:</span> <span class="mi">7310</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">165</span><span class="p">:</span> <span class="mi">9224</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">167</span><span class="p">:</span> <span class="mi">7379</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">174</span><span class="p">:</span> <span class="mf">14.409</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">176</span><span class="p">:</span> <span class="mi">5180</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">177</span><span class="p">:</span> <span class="mi">16763</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">178</span><span class="o">-</span><span class="mi">179</span><span class="p">:</span> <span class="mi">10854</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">180</span><span class="p">:</span> <span class="mf">10.854</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">181</span><span class="p">:</span> <span class="mi">9241</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">182</span><span class="p">:</span> <span class="mi">6287</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">183</span><span class="p">:</span> <span class="mi">16882</span>
+<span class="n">p</span><span class="o">.</span> <span class="mi">185</span><span class="p">:</span> <span class="mi">16604</span><span class="p">,</span> <span class="mi">16607</span><span class="p">,</span> <span class="mi">16612</span><span class="p">,</span>
+<span class="mi">16614</span><span class="p">,</span> <span class="mi">16616</span><span class="p">,</span> <span class="mi">16610</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Inventarisnummers</span>
+<span class="n">Allard</span> <span class="n">Pierson</span> <span class="n">Museum</span>
+<span class="n">omslag</span><span class="p">:</span> <span class="mi">4076</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">17</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">196</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">onder</span>
+<span class="mi">4170</span><span class="o">-</span><span class="mi">4173</span><span class="p">,</span> <span class="mi">4222</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">18</span><span class="p">:</span> <span class="mi">4206</span><span class="p">,</span> <span class="mi">4143</span><span class="p">,</span> <span class="mi">4145</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">21</span><span class="p">:</span> <span class="mi">15290</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">22</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">4162</span><span class="p">,</span> <span class="mi">4218</span><span class="p">,</span> <span class="mi">4164</span><span class="p">,</span> <span class="mi">4219</span><span class="p">;</span>
+<span class="n">onder</span> <span class="mi">3974</span><span class="o">/</span><span class="mi">3863</span><span class="p">,</span> <span class="mi">3972</span><span class="n">A</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">23</span><span class="p">:</span> <span class="mi">12637</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">33</span><span class="p">:</span> <span class="mi">12720</span><span class="p">,</span> <span class="mi">15276</span><span class="p">,</span> <span class="mi">3943</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">34</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">3858</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">12676</span><span class="p">,</span>
+<span class="mi">12678</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">35</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">4044</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">15999</span><span class="p">,</span>
+<span class="mi">16476</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">37</span><span class="p">:</span> <span class="mi">15302</span><span class="p">,</span> <span class="mi">15301</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">39</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">7298</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">4306</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">40</span><span class="p">:</span> <span class="mi">3635</span><span class="p">,</span> <span class="mi">12683</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">42</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">8752</span><span class="o">/</span><span class="mi">14021</span><span class="p">;</span> <span class="n">onder</span>
+<span class="n">Schriftmuseum</span> <span class="n">Dortmond</span>
+<span class="n">P</span><span class="o">.</span> <span class="n">Amsterdam</span> <span class="mi">22</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">43</span><span class="p">:</span> <span class="mi">9274</span><span class="p">,</span> <span class="mi">15592</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">46</span><span class="p">:</span> <span class="mi">3933</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">47</span><span class="p">:</span> <span class="mi">8850</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">48</span><span class="p">:</span> <span class="mi">3400</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">49</span><span class="p">:</span> <span class="mi">16000</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">51</span><span class="p">:</span> <span class="mi">8539</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">53</span><span class="p">:</span> <span class="mi">12698</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">54</span><span class="p">:</span> <span class="mi">12647</span><span class="p">,</span> <span class="mi">14238</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">63</span><span class="p">:</span> <span class="mi">15350</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">64</span><span class="p">:</span> <span class="mi">9237</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">65</span><span class="p">:</span> <span class="mi">8789</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">69</span><span class="p">:</span> <span class="mi">12978</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">73</span><span class="p">:</span> <span class="n">APM</span> <span class="mi">9115</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">75</span><span class="p">:</span> <span class="mi">1387</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">76</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">3408</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">3799</span><span class="p">;</span>
+<span class="n">onder</span> <span class="mi">11960</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">77</span><span class="p">:</span> <span class="mi">12718</span><span class="p">,</span> <span class="mi">8537</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">78</span><span class="p">:</span> <span class="mi">8851</span><span class="p">;</span> <span class="n">Schriftmuseum</span>
+<span class="n">Dortmond</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span> <span class="mi">115</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">79</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">9114</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">8875</span><span class="p">,</span> <span class="mi">1676</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">86</span><span class="p">:</span> <span class="mi">16500</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">87</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">9223</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">8811</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">88</span><span class="p">:</span> <span class="mi">13283</span><span class="n">a</span><span class="o">-</span><span class="n">j</span><span class="p">,</span> <span class="mi">8800</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">99</span><span class="p">:</span> <span class="mi">391</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">100</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">8065</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">13292</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">102</span><span class="p">:</span> <span class="mi">7774</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">103</span><span class="p">:</span> <span class="mi">12760</span><span class="p">,</span> <span class="mi">4307</span><span class="p">,</span> <span class="mi">15326</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">104</span><span class="p">:</span> <span class="mi">12977</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">105</span><span class="p">:</span> <span class="mi">9475</span><span class="p">,</span> <span class="mi">9492</span><span class="p">,</span> <span class="mi">9502</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">106</span><span class="p">:</span> <span class="mi">8562</span><span class="p">,</span> <span class="mi">8563</span><span class="p">,</span> <span class="mi">8417</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">107</span><span class="p">:</span> <span class="mi">8831</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">108</span><span class="p">:</span> <span class="mi">20</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">109</span><span class="p">:</span> <span class="mi">8837</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">111</span><span class="p">:</span> <span class="mi">13219</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">115</span><span class="p">:</span> <span class="mi">8795</span><span class="o">/</span><span class="mi">6</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">116</span><span class="p">:</span> <span class="mi">7126</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">117</span><span class="p">:</span> <span class="mi">7772</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">118</span><span class="p">:</span> <span class="mi">6289</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">119</span><span class="p">:</span> <span class="mi">7993</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">120</span><span class="p">:</span> <span class="mi">8846</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">124</span><span class="p">:</span> <span class="mi">7216</span><span class="p">,</span> <span class="mi">7238</span><span class="p">,</span> <span class="mi">7272</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">125</span><span class="p">:</span> <span class="mi">13158</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">129</span><span class="p">:</span> <span class="mi">7758</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">130</span><span class="p">:</span> <span class="mi">7763</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">131</span><span class="p">:</span> <span class="mi">9369</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">132</span><span class="p">:</span> <span class="mi">8517</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">133</span><span class="p">:</span> <span class="mi">7796</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">135</span><span class="p">:</span> <span class="mi">14232</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">136</span><span class="p">:</span> <span class="mi">7860</span><span class="p">,</span> <span class="mi">7861</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">137</span><span class="p">:</span> <span class="mi">9353</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">138</span><span class="p">:</span> <span class="mi">7874</span><span class="p">,</span> <span class="mi">9227</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">139</span><span class="p">:</span> <span class="mi">7803</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">141</span><span class="p">:</span> <span class="mi">7766</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">142</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">7757</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">7974</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">143</span><span class="p">:</span> <span class="mi">7761</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">144</span><span class="p">:</span> <span class="mi">8188</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">145</span><span class="p">:</span> <span class="mi">6286</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">150</span><span class="p">:</span> <span class="mi">12995</span><span class="p">,</span> <span class="mi">14513</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">152</span><span class="p">:</span> <span class="n">boven</span> <span class="mi">16750</span><span class="p">;</span> <span class="n">onder</span> <span class="mi">14510</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">153</span><span class="p">:</span> <span class="mi">8189</span>
+<span class="n">blz</span><span class="o">.</span> <span class="mi">159</span><span class="p">:</span> <span class="mi">16385</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="models.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By AP & BLM<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -5,4 +5,6 @@ chapters:
   - file: projects
   - file: data
   - file: notebooks/data_exploration
+  - file: notebooks/data_preprocessing
+  - file: notebooks/models
   - file: misc

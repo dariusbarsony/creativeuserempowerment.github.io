@@ -92,143 +92,118 @@ subjects[subjects['subject'] == 'Prenten']
 # In[11]:
 
 
+import seaborn as sns
+
 plt.figure(figsize=(10,4),dpi=200)
 sns.countplot(x='type',data=alma_beeldbank)
-
-
-# In[24]:
-
-
-print('10 most occuring formats in beelbank data: \n', alma_beeldbank['format'].value_counts().iloc[:10].to_latex())
-
-
-# In[26]:
-
-
-print('unique entries in language category:\n', alma_beeldbank['language'].unique())
-
-
-# In[36]:
-
-
-print('value counts in language category per language:\n', alma_beeldbank['language'].value_counts().iloc[:10].to_latex())
-
-
-# In[41]:
-
-
-print('unique authors of items in beeldbank:\n', alma_beeldbank['contributor'].unique())
-
-
-# In[42]:
-
-
-print('n0 of occuring items per author:\n', alma_beeldbank['contributor'].value_counts())
-
-
-# In[43]:
-
-
-unique_dates = alma_beeldbank['date'].unique()
-
-
-# In[44]:
-
-
-print('items per year: ', alma_beeldbank['date'].value_counts().to_markdown())
-
-
-# In[27]:
-
-
-alma_beeldbank = alma_beeldbank.dropna(subset=['date'])
-
-
-# In[28]:
-
-
-alma_beeldbank = alma_beeldbank[alma_beeldbank['date'].str.isnumeric()]
-
-
-# In[29]:
-
-
-alma_beeldbank['date'] = alma_beeldbank['date'].astype(int)
-
-
-# In[30]:
-
-
-alma_beeldbank = alma_beeldbank[alma_beeldbank['date'] <= 2022]
-
-
-# In[31]:
-
-
-alma_beeldbank = alma_beeldbank.sort_values('date')
-
-
-# In[32]:
-
-
-alma_beeldbank['date'].value_counts(sort=False)
-
-
-# In[33]:
-
-
-plt.figure(figsize=(8,4),dpi=200)
-sns.countplot(x='date', data=alma_beeldbank)
-plt.xticks(size=10)
-
-
-# In[34]:
-
-
-sns.displot(data=alma_beeldbank, x='date', kde=True)
-
-
-# In[28]:
-
-
-elems_per_year = [len(alma_beeldbank[alma_beeldbank['date'] == years[y]]) for y in range(len(years))]
-
-low = [e for e in elems_per_year if e < 400]
-mid = [e for e in elems_per_year if e > 400 and e < 800]
-high = [e for e in elems_per_year if e > 800]
-
-
-# In[29]:
-
-
-#stats
-len(years), len(low), len(mid), len(high)
-
-
-# In[30]:
-
-
-plt.figure(figsize=(10,10))
-plt.bar(years, elems_per_year)
-plt.xticks(color='w')
-plt.xlabel('year')
-plt.ylabel('occurrences in year')
-plt.show()
-
-
-# In[8]:
-
-
-joined = " ".join(alma_beeldbank['title'].dropna().unique())
 
 
 # In[12]:
 
 
-import wordcloud
+print('10 most occuring formats in beelbank data: \n', alma_beeldbank['format'].value_counts().iloc[:10].to_latex())
+
+
+# In[13]:
+
+
+print('unique entries in language category:\n', alma_beeldbank['language'].unique())
 
 
 # In[14]:
+
+
+print('value counts in language category per language:\n', alma_beeldbank['language'].value_counts().iloc[:10].to_latex())
+
+
+# In[15]:
+
+
+print('unique authors of items in beeldbank:\n', alma_beeldbank['contributor'].unique())
+
+
+# In[16]:
+
+
+print('n0 of occuring items per author:\n', alma_beeldbank['contributor'].value_counts())
+
+
+# In[17]:
+
+
+unique_dates = alma_beeldbank['date'].unique()
+
+
+# In[18]:
+
+
+print('items per year: ', alma_beeldbank['date'].value_counts().to_markdown())
+
+
+# In[19]:
+
+
+alma_beeldbank = alma_beeldbank.dropna(subset=['date'])
+
+
+# In[ ]:
+
+
+
+
+
+# In[20]:
+
+
+alma_beeldbank['date'] = alma_beeldbank['date'].astype(int)
+
+
+# In[108]:
+
+
+alma_beeldbank = alma_beeldbank[alma_beeldbank['date'] <= 2022]
+
+
+# In[109]:
+
+
+alma_beeldbank = alma_beeldbank.sort_values('date')
+
+
+# In[110]:
+
+
+alma_beeldbank['date'].value_counts(sort=False)
+
+
+# In[111]:
+
+
+plt.figure(figsize=(8,4),dpi=200)
+sns.countplot(x='date', data=alma_beeldbank, orient='v')
+plt.xticks(size=10)
+plt.set_xticklabels(chart.get_xticklabels(), rotation=45)
+
+
+# In[ ]:
+
+
+sns.displot(data=alma_beeldbank, x='date', kde=True)
+
+
+# In[ ]:
+
+
+joined = " ".join(alma_beeldbank['title'].dropna().unique())
+
+
+# In[ ]:
+
+
+import wordcloud
+
+
+# In[ ]:
 
 
 # code copied from: https://jingwen-z.github.io/data-viz-with-matplotlib-series9-word-cloud/
@@ -298,17 +273,9 @@ for author in alma_beeldbank['contributor'].unique():
     keywords[author] = filtered
 
 
-# 
-
-# In[ ]:
-
-
-keywords
-
-
 # ## search for APM in any of the columns of alma beeldbank export
 
-# In[37]:
+# In[ ]:
 
 
 substring = 'apm'
@@ -317,13 +284,13 @@ df[df.apply(lambda row: row.astype(str).str.contains(substring, case=False).any(
 
 # ## Beeldbank marc
 
-# In[14]:
+# In[ ]:
 
 
 titles = [record.title() for record in alma_beeldbank_marc]
 
 
-# In[19]:
+# In[ ]:
 
 
 # vergelijking van marc en dublin core record. 
@@ -341,7 +308,7 @@ for name, values in alma_beeldbank.loc[0].iteritems():
 # ## Data exploration of [archaeological objects](https://uba.uva.nl/en/support/open-data/data-sets-and-publication-channels/data-sets-and-publication-channels.html#Archeological-objects)
 # dublin core, [download](https://diensten.uba.uva.nl/open_data/downloads/uva_alma_archobjects_dc_new.tar.gz)
 
-# In[37]:
+# In[ ]:
 
 
 # dc export
@@ -373,28 +340,28 @@ records
 
 # ## theater dataset
 
-# In[11]:
+# In[ ]:
 
 
 tin = pd.read_xml('data/wwwopac_TIN_limit100000.xml')
 tin
 
 
-# In[5]:
+# In[ ]:
 
 
 tin_1 = pd.read_xml('data/theatercollecties_test1.xml')
 tin_1
 
 
-# In[3]:
+# In[ ]:
 
 
 archobjects = pd.read_xml('data/uva_alma_archobjects_dc_new.xml')
 archobjects
 
 
-# In[15]:
+# In[ ]:
 
 
 tin_1 = pd.read_xml('data/theatercollecties_test1.xml')
@@ -423,7 +390,7 @@ lod_result = pd.DataFrame(result, columns= ['predicate', 'object'])
 lod_result
 
 
-# In[12]:
+# In[112]:
 
 
 import requests
@@ -435,7 +402,7 @@ with open('feed.xml', 'wb') as file:
     file.write(response.content)
 
 
-# In[15]:
+# In[113]:
 
 
 tin_1 = pd.read_xml('feed.xml')
@@ -444,7 +411,7 @@ tin_1
 
 # ## export images from alma beeldbank
 
-# In[ ]:
+# In[114]:
 
 
 import requests
@@ -458,7 +425,7 @@ soup = BeautifulSoup(r.content, 'html.parser')
 print(soup.prettify())
 
 
-# In[ ]:
+# In[115]:
 
 
 s = soup.find('div', class_='record')
@@ -468,7 +435,7 @@ values = s.find('div', class_='value')
 s
 
 
-# In[3]:
+# In[116]:
 
 
 from PIL import Image
@@ -476,7 +443,7 @@ import requests
 import bs4
 
 
-# In[43]:
+# In[117]:
 
 
 alma_beeldbank['identifier']
@@ -501,7 +468,7 @@ alma_beeldbank['identifier']
 
 # # linking from online --> offline
 
-# In[6]:
+# In[118]:
 
 
 literature = []
@@ -521,20 +488,20 @@ def literature(link):
 l = alma_beeldbank['identifier'].iloc[:50].apply(literature)
 
 
-# In[7]:
+# In[119]:
 
 
 alma_beeldbank['literature'] = l
 
 
-# In[10]:
+# In[120]:
 
 
 alma_beeldbank['literature']
 alma_beeldbank['literature'].iloc[8]
 
 
-# In[12]:
+# In[121]:
 
 
 query = ['Bibliotheca']
@@ -542,7 +509,7 @@ df_x = alma_beeldbank.explode('literature')
 df_x.set_index('literature').loc[query].reset_index(drop=True)
 
 
-# In[7]:
+# In[ ]:
 
 
 alma_beeldbank['literature'] = literature
@@ -550,19 +517,19 @@ alma_beeldbank['literature'] = literature
 
 # # ground truth APM labels
 
-# In[3]:
+# In[ ]:
 
 
 import math
 
 
-# In[4]:
+# In[ ]:
 
 
 df = pd.read_excel('../data/catalogs/Crossroads - spreadsheet.xlsx', header=9)
 
 
-# In[5]:
+# In[ ]:
 
 
 import re
@@ -573,32 +540,32 @@ def apm(descr):
 df['APM'] = df['Image name'].dropna().apply(apm)
 
 
-# In[6]:
+# In[ ]:
 
 
 df['APM']
 
 
-# In[7]:
+# In[ ]:
 
 
 references = df['APM'].values.tolist()
 
 
-# In[8]:
+# In[ ]:
 
 
 references = [r for r in references if r != [] and type(r) != float]
 
 
-# In[9]:
+# In[ ]:
 
 
 references
 online_indices = [(0,0),(3,0),(5,0),(6,0),(9,1)]
 
 
-# In[10]:
+# In[ ]:
 
 
 references
@@ -606,25 +573,25 @@ references
 
 # actually we have to cross reference this against the APM numbers in the pdf of the catalog
 
-# In[11]:
+# In[ ]:
 
 
 # from catalog
 
 
-# In[12]:
+# In[ ]:
 
 
 illustratieverantwoording = ' 10 above (APM16324),  \n1 3 (APM13822, APM9370),  \n29 above (APM7855),  5 1 (APM9276, APM9278, APM9280),  52 (APM16772),  \n66 (APM7468),  \n6 7 (APM12995),  \n69, 71 (APM7798),  \n72 (APM16388),  73 (APM3830),  \n7 4 (APM7798),  \n103 below (APM12974), \n1 46 (APM8471),  1 47 (APM8107),  \n1 6 2 (APM7071),  1 63 left (APM09163),  \n1 63 right (APM15589),  \n1 7 6 above (APM16369), 1 80 (APM3831, APM10998)'
 
 
-# In[13]:
+# In[ ]:
 
 
 references_book = apm(str(illustratieverantwoording))
 
 
-# In[14]:
+# In[ ]:
 
 
 def cross_reference(references, references_book):
@@ -637,25 +604,25 @@ def cross_reference(references, references_book):
     return cr
 
 
-# In[15]:
+# In[ ]:
 
 
 references, references_book
 
 
-# In[16]:
+# In[ ]:
 
 
 # all of the 
 
 
-# In[17]:
+# In[ ]:
 
 
 cross_reference(references, references_book)
 
 
-# In[18]:
+# In[ ]:
 
 
 "Inventory numbers Allard
@@ -769,7 +736,7 @@ p. 185: 16604, 16607, 16612,
 16614, 16616, 16610
 
 
-# In[19]:
+# In[ ]:
 
 
 Inventarisnummers
@@ -854,12 +821,6 @@ blz. 150: 12995, 14513
 blz. 152: boven 16750; onder 14510
 blz. 153: 8189
 blz. 159: 16385
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
